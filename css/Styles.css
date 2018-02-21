@@ -1,0 +1,176 @@
+/* Primary */
+body {
+  margin:0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background: #dedcd7;
+  color: #524847;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+  overflow: auto;
+}
+
+img {
+  display: block; /* This displays it across the width of the whole screen*/
+  width: 100%; /* of it's container. ATM which is the div tag w/id of card*/
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 1em 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: initial;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.btn {
+  display: inline-block; /* Did not want it to span the screen so we used INLINE-block. We did this si it was overlapping the elements above and blow. */
+  background: #f1f1f1;
+  color: 222222;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #222222;
+  margin: .5em 0;
+}
+
+.btn:hover {
+  background: #e29207;
+  color: white;
+  border: 1px solid #e29207;
+}
+
+/* Header */
+#header {
+  min-height: 500px;
+  color: black;
+  text-align: center;
+  z-index: -100;
+}
+
+div.background-image{
+  position: absolute; /* Because we want it to go over the header div above */
+  background-image: url(../Pictures/Bryggen.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* You will not see anything until you disclose it's size*/
+  height: 500px; /* We want it to the the height of it's parent element of 450px. But I believe this will auto do that*/
+  opacity: 0.8;
+  z-index: -100;
+}
+
+#header h1 {
+  padding-top: 180px;
+  padding-bottom: 0;
+  color: black;/*#6e211a*/
+  font-weight: 400;
+}
+
+#header .content-wrap,
+#section-2 .content-wrap,
+#section-3 .content-wrap {
+  padding: 0 1.2em;
+}
+
+/* Case Studies */
+#section-1 {
+  padding: 2em 1em 1em;
+}
+
+#section-1 ul {
+  margin-bottom: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#section-1 ul li {
+  background: white;
+  margin-bottom: 1em;
+  color: #222222;
+  border-radius: 0 0 10px 10px;
+}
+
+.card_content {
+  padding: 1em;
+}
+
+/* Art work */
+#section-2 {
+  padding-bottom: 2em;
+  background: #21201e;
+  color: white;
+}
+
+/* Who am I?! */
+#section-3 {
+  padding: 1em 0 2em 0;
+}
+
+/* Section 4 / BOXES CONTACT AND FAMILY*/
+#section-4 .box {
+  padding: 2em;
+}
+
+#section-4 .box:first-child {
+  background: #e29207;
+  color: #222222;
+}
+
+#section-4 .box:last-child {
+  background: #6e211a;
+  color: #bfbfbf;
+}
+
+/* Footer */
+#footer {
+  padding: 2em;
+  background: #21201e;
+  color: #bfbfbf;
+  text-align: center;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #e29207;
+}
+
+/* MEDIA QUERY */
+@media(min-width: 750px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr; /* Can use %, em's, px's, fr's */
+  }
+
+  #section-1 ul {
+    display: flex; /* Aligns the cards on the same row, like floating them all left or like inline-block */
+    justify-content: space-around;
+  }
+
+  #section-1 li {
+    width: 40%;
+  }
+
+  #section-3 .content-text {
+    columns: 2;
+    column-gap: 3em;
+    text-align: left;
+  }
+  #section-3 .content-text p {
+    padding-top: 0;
+  }
+
+  .content-wrap, #section-1 ul {
+    grid-column: 2/4;
+  }
+
+  #footer div, .box {
+    grid-column: span 2;
+  }
+}
