@@ -4,8 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/Styles.css">
     <title>Nick Noel Website</title>
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/Fancybox.css">
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jquery.fancybox.min.js"></script>
+    <link href="jquery.fancybox.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+    <script type="text/javascript">
+
+    	$("[data-fancybox]").fancybox({
+    		// Options will go here
+    	});
+
+    </script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300|Poiret+One|Quicksand|Rajdhani" rel="stylesheet">
@@ -14,6 +32,7 @@
   <body>
     <!--header showcase my picture -->
     <header id="header" class="grid">
+      <!-- <img src="Pictures/Norheimsund.jpg" alt="Norheimsund"> -->
       <div class="background-image"></div>
       <div class="content-wrap">
         <h1>My name is Nick Noel but some call me God</h1>
@@ -54,17 +73,23 @@
       <!-- Section 2 / ARTWORK -->
       <section id="section-2" class="grid">
         <div class="content-wrap">
-          <h2 class="art_title">Some of my artwork</h2>
+          <h2 class="art_title">Artwork</h2>
           <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
             in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
             Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
             up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage.
-            <br />
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-            in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
-            up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
           </p>
+          <div class="art-grid">
+              <a href="Pictures/katieBete.jpg" data-fancybox="images" data-caption="Caption #1">
+                <img src="Pictures/katieBete.jpg" alt="2013, Summer">
+              </a>
+              <a href="Pictures/katieBete.jpg" data-fancybox="images" data-caption="Caption #1">
+                <img src="Pictures/katieBete.jpg" alt="2013, Summer">
+              </a>
+              <a href="Pictures/katieBete.jpg" data-fancybox="images" data-caption="Caption #1">
+                <img src="Pictures/katieBete.jpg" alt="2013, Summer">
+              </a>
+          </div>
         </div>
       </section>
 
