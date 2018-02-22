@@ -20,7 +20,7 @@
     <script type="text/javascript">
 
     	$("[data-fancybox]").fancybox({
-    		// Options will go here
+    		protect: true
     	});
 
     </script>
@@ -30,13 +30,14 @@
   </head>
 
   <body>
+
     <!--header showcase my picture -->
     <header id="header" class="grid">
       <!-- <img src="Pictures/Norheimsund.jpg" alt="Norheimsund"> -->
       <div class="background-image"></div>
       <div class="content-wrap">
         <h1>My name is Nick Noel but some call me God</h1>
-        <a href="#section-1" class="btn">See my work!</a>
+        <div class="btn-outline"><a href="#section-1" class="btn">See my work!</a></div>
       </div>
     </header>
 
@@ -44,6 +45,7 @@
 
       <!-- Section 1 / CASE STUDIES -->
       <section id="section-1" class="grid">
+        <h2> Case Studies</h2>
         <ul>
           <li>
             <div class="card">
@@ -79,18 +81,33 @@
             Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
             up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage.
           </p>
+
           <div class="art-grid">
-              <a href="Pictures/katieBete.jpg" data-fancybox="images" data-caption="Caption #1">
+              <!-- <img class="expand" src="Pictures/arrow-expand-all.svg" alt="icon">-->
+              <a href="Pictures/katieBete.jpg" data-fancybox="group" data-caption="Charcoal, 2013">
                 <img src="Pictures/katieBete.jpg" alt="2013, Summer">
               </a>
-              <a href="Pictures/katieBete.jpg" data-fancybox="images" data-caption="Caption #1">
-                <img src="Pictures/katieBete.jpg" alt="2013, Summer">
+              <a href="Pictures/skullCharcoal.jpg" data-fancybox="group" data-caption="Caption #1">
+                <img src="Pictures/skullCharcoal2.jpg" alt="2013, Summer">
               </a>
-              <a href="Pictures/katieBete.jpg" data-fancybox="images" data-caption="Caption #1">
-                <img src="Pictures/katieBete.jpg" alt="2013, Summer">
+              <a href="Pictures/womanCharcoal.jpg" data-fancybox="group" data-caption="Caption #1">
+                <img src="Pictures/womanCharcoal.jpg" alt="2013, Summer">
+              </a>
+              <a href="Pictures/nadineDrawing.jpg" data-fancybox="group" data-caption="Charcoal, 2013">
+                <img src="Pictures/nadineDrawing.jpg" alt="2013, Summer">
+              </a>
+              <a href="Pictures/knightDrawing.jpg" data-fancybox="group" data-caption="Caption #1">
+                <img src="Pictures/knightDrawing.jpg" alt="2013, Summer">
+              </a>
+              <a href="Pictures/eye1.jpg" data-fancybox="group" data-caption="Caption #1">
+                <img src="Pictures/eye1.jpg" alt="2013, Summer">
               </a>
           </div>
         </div>
+
+        <!-- <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="#000000" d="M9.5,13.09L10.91,14.5L6.41,19H10V21H3V14H5V17.59L9.5,13.09M10.91,9.5L9.5,10.91L5,6.41V10H3V3H10V5H6.41L10.91,9.5M14.5,13.09L19,17.59V14H21V21H14V19H17.59L13.09,14.5L14.5,13.09M13.09,9.5L17.59,5H14V3H21V10H19V6.41L14.5,10.91L13.09,9.5Z" />
+        </svg> -->
       </section>
 
       <!-- Section 3 / WHO AM I?!-->

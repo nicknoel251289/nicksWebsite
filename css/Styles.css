@@ -1,10 +1,16 @@
 /* Primary */
+/* html {
+  background-image: url(../Pictures/starry.png);
+  background-repeat:no-repeat;
+  background-size: 1920px;
+} */
+
 body {
   margin:0;
   font-family: 'Lato', sans-serif;
-  background: #ffffff;
+  background: #181818;
   color: #6d6d6d;
-  font-size: 1em;
+  font-size: .9em;
   line-height: 1.5;
   text-align: center;
   overflow-x: hidden;
@@ -29,41 +35,57 @@ p {
   padding: 1em 0;
 }
 
-.btn {
+.btn-outline {
   position: relative;
   top: 220px;
+  display: inline-block;
+  border: 1px solid white;
+  -webkit-transition: width 1s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
+}
+
+.btn-outline:hover {
+  background: #74236b;
+}
+
+.btn {
+  width: 190px;
+  height: 40px;
+  position: relative;
+  top: 8px;
   display: inline-block; /* Did not want it to span the screen so we used INLINE-block. We did this si it was overlapping the elements above and blow. */
-  background: #f1f1f1;
   color: 222222;
   text-decoration: none;
-  padding: 1em 2em;
-  border: 1px solid #222222;
-  margin: .5em 0;
+  -webkit-transition: width 1s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
 }
 
 .btn:hover {
-  background: #e29207;
   color: white;
-  border: 1px solid #e29207;
+  width: 280px;
+}
+
+.btn:visited {
+  text-decoration: none;
+  color: white;
 }
 
 /* Header */
 #header {
   margin: 0;
-  min-height: 500px;
+  min-height: 675px;
   text-align: center;
   position: relative;
+  border-bottom: 2px solid #999999;
 }
 
 div.background-image{
   position: fixed; /* Because we want it to go over the header div above */
-  background-image: url(../Pictures/Norheimsund.jpg);
+  background-image: url(../Pictures/starry.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  width: 250%; /* You will not see anything until you disclose it's size*/
-  min-height: 500px; /* We want it to the the height of it's parent element of 450px. But I believe this will auto do that*/
-  left:-300px;
+  width: 100%; /* You will not see anything until you disclose it's size*/
+  min-height: 675px; /* We want it to the the height of it's parent element of 450px. But I believe this will auto do that*/
   z-index: -200;
+  opacity: .4;
 }
 
 #header h1 {
@@ -84,22 +106,25 @@ div.background-image{
 
 /* Case Studies */
 #section-1 {
-  background: #e29e29;
-  padding: 2em 1em 1em;
+  background: #181818;
+  padding: 2em;
 }
 
 #section-1 ul {
-  margin-bottom: 1em;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding:0;
 }
 
 #section-1 ul li {
-  background: #ffffff;
+  background: #e1e1e1;
   margin-bottom: 1em;
   color: #222222;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0
 }
 
 .card_content {
@@ -108,12 +133,13 @@ div.background-image{
 
 /* Art work */
 #section-2 {
-  padding: 2em 0;
-  background: #d7d5cf;
+  padding: 7em 0;
+  background: #111111;
 }
 
 #section-2 p {
   animation: fadeIn 4s;
+  padding: 4em 0;
 }
 @keyframes fadeIn {
   from {
@@ -130,8 +156,8 @@ div.background-image{
 
 /* Who am I?! */
 #section-3 {
-  padding: 1em 2em 2em 2em;
-  background: white;
+  padding: 5em 2em;
+  background: #f1f1f1;
 }
 
 /* Section 4 / BOXES CONTACT AND FAMILY*/
@@ -140,19 +166,19 @@ div.background-image{
 }
 
 #section-4 .box:first-child {
-  background: #e29207;
+  background: #a9e1c6;
   color: #222222;
 }
 
 #section-4 .box:last-child {
-  background: #6e211a;
+  background: #222222;
   color: #bfbfbf;
 }
 
 /* Footer */
 #footer {
   padding: 2em;
-  background: #21201e;
+  background: #111111;
   color: #bfbfbf;
   text-align: center;
 }
@@ -166,19 +192,25 @@ div.background-image{
 @media(min-width: 750px) {
 
   main, footer {
-    margin: 0 5% 0 5%;
+    /* margin: 0 10% 0 10%; */
   }
-  header .background-image{
-    margin: 0 5% 0 5%;
-    max-width: 90%;
-  }
-  div.background-image{
+  /*header .background-image{
+    margin: 0 10% 10%;
+    max-width: 80%;
+    height: 100%;
     left: 0;
-    width: 100%;
-  }
+  }*/
 
   h1, h2, h3, h4 {
     text-transform: uppercase;
+  }
+
+  #header {
+    height: 1080px;
+  }
+
+  div.background-image {
+    height: 1080px;
   }
 
   .grid {
@@ -192,32 +224,52 @@ div.background-image{
   }
 
   #section-1 {
-    padding-top: 2em;
+    padding: 5em 0;
+  }
+
+  #section-1 h2 {
+    grid-column: 2/4;
   }
 
   #section-1 ul {
     display: flex; /* Aligns the cards on the same row, like floating them all left or like inline-block */
     justify-content: space-around;
+    padding: 3.5em 0;
   }
 
   #section-1 li {
     width: 40%;
   }
 
-  #section-2 {
-    grid-column: 5;
+  #section-1 p {
+    padding: .1em 1em;
+    letter-spacing: -.03em;
+  }
+
+  .card:hover {
+    box-shadow: 0px 0px 5px #a9e1c6;
+    border-radius: 10px;
+  }
+
+  #section-1 ul li:hover {
+    width: 22em;
+    -webkit-transition: width .5s, margin .5s, border .5s, border-radius .5s, background 1.5s, color 1s, top 4s;
   }
 
   #section-2 a{
-    padding: 1em;
+    padding: .5em;
   }
 
   #section-3 {
-    padding: 0;
+    padding: 5em 0;
+  }
+
+  #section-3 h2 {
+    padding: 1em 0 4em 0;
   }
 
   #section-3 .content-wrap {
-    padding: 0 2.5em 2em 2.5em;
+    padding: 1.5em 2.5em 2em 2.5em;
   }
 
   #section-3 .content-text {
@@ -231,6 +283,10 @@ div.background-image{
 
   .content-wrap, #section-1 ul {
     grid-column: 2/4;
+  }
+
+  #section-4, #section-4 p {
+    padding: 3em 0;
   }
 
   #footer div, .box {
