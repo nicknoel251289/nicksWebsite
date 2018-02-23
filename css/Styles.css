@@ -85,7 +85,7 @@ div.background-image{
   width: 100%; /* You will not see anything until you disclose it's size*/
   min-height: 675px; /* We want it to the the height of it's parent element of 450px. But I believe this will auto do that*/
   z-index: -200;
-  opacity: .4;
+
 }
 
 #header h1 {
@@ -246,18 +246,30 @@ div.background-image{
     letter-spacing: -.03em;
   }
 
+  .CS-appear {
+    opacity: 0;
+    transition: opacity 8s;
+  }
+
   .card:hover {
     box-shadow: 0px 0px 5px #a9e1c6;
     border-radius: 10px;
   }
 
   #section-1 ul li:hover {
-    width: 22em;
+    position: relative;
+    top: 10px;
+    /* width: 22em; */
     -webkit-transition: width .5s, margin .5s, border .5s, border-radius .5s, background 1.5s, color 1s, top 4s;
   }
 
   #section-2 a{
     padding: .5em;
+  }
+
+  .art-grid {
+    opacity: 0;
+    transition: opacity 8s;
   }
 
   #section-3 {
