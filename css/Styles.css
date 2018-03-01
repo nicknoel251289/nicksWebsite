@@ -85,7 +85,7 @@ div.background-image{
   width: 100%; /* You will not see anything until you disclose it's size*/
   min-height: 675px; /* We want it to the the height of it's parent element of 450px. But I believe this will auto do that*/
   z-index: -200;
-
+  height: 1080px;
 }
 
 #header h1 {
@@ -121,6 +121,14 @@ div.background-image{
   margin-bottom: 1em;
   color: #222222;
   border-radius: 10px 10px 10px 10px;
+  border: 3px solid #e1e1e1;
+}
+
+
+/* Case Study fade-in/out */
+.CS-appear {
+  opacity: 0;
+  transition: opacity 6s;
 }
 
 .card img {
@@ -137,17 +145,14 @@ div.background-image{
   background: #111111;
 }
 
-#section-2 p {
-  animation: fadeIn 4s;
-  padding: 4em 0;
+.art-grid {
+  opacity: 0;
+  transition: opacity 6s;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+#section-2 p {
+  transition: opacity 4s;
+  padding: 4em 0;
 }
 
 #section-2 img{
@@ -215,7 +220,7 @@ div.background-image{
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr; /* Can use %, em's, px's, fr's */
+    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr; /* Can use %, em's, px's, fr's */
   }
 
   .art-grid {
@@ -246,30 +251,16 @@ div.background-image{
     letter-spacing: -.03em;
   }
 
-  .CS-appear {
-    opacity: 0;
-    transition: opacity 8s;
-  }
-
   .card:hover {
-    box-shadow: 0px 0px 5px #a9e1c6;
     border-radius: 10px;
   }
 
   #section-1 ul li:hover {
-    position: relative;
-    top: 10px;
-    /* width: 22em; */
-    -webkit-transition: width .5s, margin .5s, border .5s, border-radius .5s, background 1.5s, color 1s, top 4s;
+    border: 3px solid white;
   }
 
   #section-2 a{
     padding: .5em;
-  }
-
-  .art-grid {
-    opacity: 0;
-    transition: opacity 8s;
   }
 
   #section-3 {
@@ -281,13 +272,13 @@ div.background-image{
   }
 
   #section-3 .content-wrap {
-    padding: 1.5em 2.5em 2em 2.5em;
+    padding: 1.5em 0em 2em 0em;
   }
 
   #section-3 .content-text {
     columns: 2;
     column-gap: 3em;
-    text-align: left;;
+    text-align: left;
   }
   #section-3 .content-text p {
     padding-top: 0;
