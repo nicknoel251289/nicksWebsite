@@ -1,0 +1,28 @@
+
+
+
+
+/* Footer */
+#footer {
+  padding: 2em;
+  background: #111111;
+  color: #bfbfbf;
+  text-align: center;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #e29207;
+}
+
+@media(min-width: 750px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr repeat(2, minmax(auto, 30em)) 1fr 1fr; /* Can use %, em's, px's, fr's */
+  }
+
+  #footer div, .box {
+    grid-column: span 3/5;
+  }
+}

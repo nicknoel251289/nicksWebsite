@@ -104,6 +104,10 @@ div.background-image{
   padding: 0 1.2em;
 }
 
+.sideNav {
+  display: none;
+}
+
 /* Case Studies */
 #section-1 {
   background: #181818;
@@ -128,7 +132,7 @@ div.background-image{
 /* Case Study fade-in/out */
 .CS-appear {
   opacity: 0;
-  transition: opacity 6s;
+  transition: opacity 7s;
 }
 
 .card img {
@@ -147,7 +151,7 @@ div.background-image{
 
 .art-grid {
   opacity: 0;
-  transition: opacity 6s;
+  transition: opacity 7s;
 }
 
 #section-2 p {
@@ -259,12 +263,48 @@ div.background-image{
     border: 3px solid white;
   }
 
+  .sideNav {
+    position: fixed;
+    top: 400px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 8s;
+  }
+
+.sideNav ul {
+  display: block;
+  position: relative;
+  left: -20px;
+}
+
+  .sideNav li {
+    list-style-type: none;
+    text-align: center;
+    padding: 1em 0;
+    width: 134px;
+  }
+
+  .sideNav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333333;
+    border: 1px solid #333333;
+    opacity: .3;
+    border-radius: 5px;
+  }
+
+  .sideNav a:hover {
+    background: #a9e1c6;
+    opacity: 1;
+  }
+
   #section-2 a{
     padding: .5em;
   }
 
   #section-3 {
-    padding: 5em 0;
+    padding: 5em 1em;
   }
 
   #section-3 h2 {
