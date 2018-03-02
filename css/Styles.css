@@ -267,31 +267,52 @@ div.background-image{
     position: fixed;
     top: 400px;
     left: 0;
-    opacity: 0;
-    transition: opacity 8s;
+    border-right: 1px solid #333333;
+    transition: .7s;
+    width: 134px;
   }
 
-.sideNav ul {
-  display: block;
-  position: relative;
-  left: -20px;
-}
+  .sideNav ul {
+    display: block;
+    position: relative;
+    left: -20px;
+  }
 
   .sideNav li {
     list-style-type: none;
     text-align: center;
-    padding: 1em 0;
-    width: 134px;
+    width: 80px;
   }
 
-  .sideNav a {
+  .sideNav a{
     display: block;
-    padding: 10px;
     text-decoration: none;
     color: #333333;
-    border: 1px solid #333333;
     opacity: .3;
     border-radius: 5px;
+    width: 110px;
+    padding: 10px 0;
+  }
+
+  .sideNav:hover {
+    width: 194px;
+    border-right: 1px solid #333333;
+    transition: .7s;
+  }
+
+  .sideNav li:hover {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .sideNav a:hover {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    opacity: .3;
+    border-radius: 5px;
+    width: 110px;
+    padding: 10px 0;
   }
 
   .sideNav a:hover {
