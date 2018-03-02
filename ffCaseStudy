@@ -27,6 +27,27 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300|Poiret+One|Quicksand|Rajdhani" rel="stylesheet">
   </head>
 
+  <body>
+
+    <header>
+
+    </header>
+
+    <section id="section-1">
+    </section>
+
+    <section id="section-2">
+    </section>
+
+    <section id="section-3">
+    </section>
+
+    <section id="section-4">
+    </section>
+
+    <section id="section-5">
+    </section>
+
     <footer id="footer" class="grid">
       <div>Projects by Nick Noel aka God Almighty</div>
       <div>Facebook <a href="https://www.facebook.com/nick.noel.89" target="_blank">Nick Noel</a></div>

@@ -104,10 +104,6 @@ div.background-image{
   padding: 0 1.2em;
 }
 
-.sideNav {
-  display: none;
-}
-
 /* Case Studies */
 #section-1 {
   background: #181818;
@@ -265,59 +261,25 @@ div.background-image{
 
   .sideNav {
     position: fixed;
-    top: 400px;
-    left: 0;
-    border-right: 1px solid #333333;
-    transition: .7s;
-    width: 134px;
+    top: 0;
+    background: #111111;
+    width: 100%;
+    transition: height .7s;
+    z-index: 500;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .sideNav ul {
-    display: block;
+  .sideNav a {
     position: relative;
-    left: -20px;
-  }
-
-  .sideNav li {
-    list-style-type: none;
-    text-align: center;
-    width: 80px;
-  }
-
-  .sideNav a{
-    display: block;
+    justify-content;
+    z-index: 500;
     text-decoration: none;
-    color: #333333;
-    opacity: .3;
-    border-radius: 5px;
-    width: 110px;
-    padding: 10px 0;
   }
 
-  .sideNav:hover {
-    width: 194px;
-    border-right: 1px solid #333333;
-    transition: .7s;
-  }
-
-  .sideNav li:hover {
-    list-style-type: none;
-    text-align: center;
-  }
-
-  .sideNav a:hover {
-    display: block;
-    text-decoration: none;
-    color: #333333;
-    opacity: .3;
-    border-radius: 5px;
-    width: 110px;
-    padding: 10px 0;
-  }
-
-  .sideNav a:hover {
-    background: #a9e1c6;
-    opacity: 1;
+  .sideNav a:visited{
+    color: white;
+    z-index: 500;
   }
 
   #section-2 a{

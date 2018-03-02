@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+  var lastPosition = 0;
+
+
   $(document).scroll(function() {
       var position = $(this).scrollTop();
       var caseStudy = $('#section-1').position();
@@ -20,25 +24,44 @@ $(document).ready(function(){
       }
 
       var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top - 400;
-      if (position > sideNavPositionY) {
-        $('.sideNav').css({'display': 'block', 'opacity': '1'});
+      var sideNavPositionY = sideNavPosition.top;
+      /* if (position > sideNavPositionY) {
+        $('.sideNav').css('height', '60px');
+        $('div.sideNav > ul > li > a').css('display', 'block');
+        //$('div.sideNav > ul > li > a').animate({top: '0px'},700);
+        //$('.sideNav').animate({height: '60px'},700);
       } else if (position < sideNavPositionY) {
-        $('.sideNav').css({'display': 'none', 'opacity': '0'});
+        $('.sideNav').css('height', '0');
+        $('div.sideNav > ul > li > a').css('display', 'none');
+        //$('div.sideNav > ul > li > a').animate({top: '-100px'},700);
+        //$('.sideNav').animate({height: '0px'},700);
+      } */
+
+      if (lastPosition > position || position <= sideNavPositionY) {
+        //$('.sideNav').css('height', '0px');
+        $('.sideNav').animate({height: '0px'},30);
+        $('sideNav').css('top', '-100px');
+        $('div.sideNav > a').css('top', '-100px');
+      } else if (lastPosition < position){
+        $('.sideNav').animate({height: '60px'},30);
+        $('sideNav').css('top', '0px');
+        $('div.sideNav > a').css('top', '0px');
       }
 
-      //turn of the side nav when scrolling
-      var windowWidth = $(this).innerWidth();
-      if (windowWidth < 1190) {
-        $('.sideNav').css('display', 'none');
-      }
+      lastPosition = position;
 
-      if (position > caseStudyY){
-        $('ul.sideNav > li').css('color', 'red');
-      }
 
   });
 
+  $(window).resize(function(){
+    var windowWidth = $(this).innerWidth();
+    console.log(windowWidth);
+    if (windowWidth < 750) {
+      $('.sideNav').css('display', 'none');
+    } else if (windowWidth > 750) {
+      $('.sideNav').css('display', 'grid');
+    }
+  });
 
   //see my work! button on main page
   $(".btn").on('click', function(event) {
@@ -59,6 +82,7 @@ $(document).ready(function(){
 
   //side nav bar buttons
   $(".btn2").on('click', function(event) {
+
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -77,7 +101,7 @@ $(document).ready(function(){
   /////////////////////////////////////////
   // Turn of sideNav when resizing window//
   /////////////////////////////////////////
-  $(window).resize(function() {
+  /* $(window).resize(function() {
     var windowWidth = $(this).innerWidth();
 
     if (windowWidth < 1190){
@@ -85,8 +109,6 @@ $(document).ready(function(){
     } else if (windowWidth > 1190){
       $('.sideNav').css('display', 'block');
     }
-  });
-
-
+  }); */
 
 });
