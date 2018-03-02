@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   var lastPosition = 0;
 
-
   $(document).scroll(function() {
       var position = $(this).scrollTop();
       var caseStudy = $('#section-1').position();
@@ -37,15 +36,20 @@ $(document).ready(function(){
         //$('.sideNav').animate({height: '0px'},700);
       } */
 
+
       if (lastPosition > position || position <= sideNavPositionY) {
         //$('.sideNav').css('height', '0px');
         $('.sideNav').animate({height: '0px'},30);
         $('sideNav').css('top', '-100px');
         $('div.sideNav > a').css('top', '-100px');
+        $('div.sideNav > a').animate({height: '0px'},30);
       } else if (lastPosition < position){
         $('.sideNav').animate({height: '60px'},30);
-        $('sideNav').css('top', '0px');
+        $('.sideNav').css('top', '0px');
         $('div.sideNav > a').css('top', '0px');
+        $('div.sideNav > a').css('margin', '20px');
+        $('div.sideNav > a').animate({height: '60px'},30);
+        $('div.sideNav > a').animate({opacity: '1'},30);
       }
 
       lastPosition = position;
