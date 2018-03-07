@@ -39,17 +39,17 @@ $(document).ready(function(){
 
       if (lastPosition > position || position <= sideNavPositionY) {
         //$('.sideNav').css('height', '0px');
-        $('.sideNav').animate({height: '0px'},30);
+        $('.sideNav').animate({height: '0px'},10);
         $('sideNav').css('top', '-100px');
         $('div.sideNav > a').css('top', '-100px');
-        $('div.sideNav > a').animate({height: '0px'},30);
+        $('div.sideNav > a').animate({height: '0px'},10);
       } else if (lastPosition < position){
-        $('.sideNav').animate({height: '60px'},30);
+        $('.sideNav').animate({height: '60px'},10);
         $('.sideNav').css('top', '0px');
         $('div.sideNav > a').css('top', '0px');
         $('div.sideNav > a').css('margin', '20px');
-        $('div.sideNav > a').animate({height: '60px'},30);
-        $('div.sideNav > a').animate({opacity: '1'},30);
+        $('div.sideNav > a').animate({height: '60px'},10);
+        $('div.sideNav > a').animate({opacity: '1'},10);
       }
 
       lastPosition = position;

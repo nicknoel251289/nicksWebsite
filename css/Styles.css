@@ -259,12 +259,17 @@ div.background-image{
     border: 3px solid white;
   }
 
+  /* .navCenter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
+
   .sideNav {
     position: fixed;
     top: -100;
     background: #111111;
     width: 100%;
-    transition: height .5s;
+    transition: height 1s;
     z-index: 500;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
