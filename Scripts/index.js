@@ -105,14 +105,14 @@ $(document).ready(function(){
   /////////////////////////////////////////
   // Turn of sideNav when resizing window//
   /////////////////////////////////////////
-  /* $(window).resize(function() {
+  $(window).resize(function() {
     var windowWidth = $(this).innerWidth();
 
-    if (windowWidth < 1190){
+    if (windowWidth < 740){
       $('.sideNav').css('display', 'none');
     } else if (windowWidth > 1190){
       $('.sideNav').css('display', 'block');
     }
-  }); */
+  });
 
 });
