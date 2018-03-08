@@ -10,12 +10,12 @@ body {
 }
 
 main {
-  padding: 0 1em;
+  padding: 0;
 }
 
 h1, h2, h3, h4 {
   margin: 0;
-  padding: 0 1em 1em 1em;
+  padding: 1em 1em 2em 1em;
 }
 
 img {
@@ -23,7 +23,6 @@ img {
   width: 100%;
   height: auto;
   border-radius: 3px;
-  box-shadow: 0px 0px 6px 1px #888888;
 }
 
 div, p {
@@ -34,21 +33,88 @@ p {
   padding: 1em;
 }
 
-#section-0, #section-1, #section-2, #section-3, #section-3a, #section-4, #section-5 {
-  padding: 2em 0 0 0;
+a,
+a:hover,
+a:visited {
+  color: #777;
+}
+
+#section-0, #section-1, #section-2, #section-3, #section-3a, #section-4, #section-4a, #section-5 {
+  padding: 2em 1em;
+}
+
+.section-1and2Grid {
+  background: #222222;
+  color: #999;
+}
+
+#section-3 div {
+  justify-self: center;
+}
+
+#section-0 img, #section-3 img, #section-3a img {
+  box-shadow: 0px 0px 6px 1px #888888;
+}
+
+#section-4, #section-4a {
+  background: #222222;
+  color: #999999;
+}
+
+#section-3a p {
+  padding-bottom: 3em;
+}
+
+#section-4a p {
+  padding-bottom: 3em;
+}
+
+#section-3a div {
+  padding-bottom: 2em;
+}
+
+#section-4a div {
+  padding-bottom: 1em;
+}
+
+#section-4 p {
+  padding-top: 0;
 }
 
 .pictureGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
   grid-gap: .5em;
-  padding: 0 1em 1em 1em 1em;
 }
 
+.researchPicGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .5em;
+}
+
+.personaPic img{
+  padding-bottom: 1em;
+}
 
 #section-2 ul {
   text-align: left;
 }
+
+#section-6 {
+  background: #222222;
+  color: white;
+}
+
+#section-6 a {
+  text-decoration: none;
+}
+
+#section-6 a:hover {
+  background: white;
+  color: black;
+  text-decoration: none;
+  }
 
 /* Footer */
 #footer {
@@ -69,8 +135,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column: 2/4;
-    grid-column-gap: 2em;
-    padding: 2em;
+    grid-column-gap: .5em;
   }
 
   .pictureGrid {
@@ -85,6 +150,12 @@ p {
 }
 
 @media(min-width: 775px) {
+
+  .researchPicGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    padding-top: 2em;
+  }
 
   .sideNav {
     position: fixed;
@@ -103,17 +174,20 @@ p {
     z-index: 500;
     text-decoration: none;
     transition: 1s;
-    color: white;
+    color: #777;
   }
 
   .sideNav a:visited{
-    color: white;
     z-index: 500;
+  }
+
+  .sideNav a:hover{
+    color: white;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-columns: 1fr 12fr 12fr 1fr;
     grid-column-gap: 1em;
   }
 
@@ -121,14 +195,19 @@ p {
     grid-column: span 4;
   }
 
-  #section-0 a, #section-0 p  {
+  #section-0 a {
     grid-column: span 2/4;
-    padding: 1em 2em;
+    padding: 3em 2em;
+  }
+
+  #section-0 p {
+    grid-column: span 2/4;
+    padding: 5em 0;
   }
 
   .section-1and2Grid {
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-columns: 1fr 12fr 12fr 1fr;
   }
 
   #section-1 {
@@ -164,20 +243,21 @@ p {
     grid-column: 2/3;
   }
 
-  #section-3a h3 {
+  #section-3a h3, #section-4a h3 {
       grid-column: span 4;
   }
 
-  #section-3a p {
+  #section-3a p, #section-4a p{
     grid-column: 2/4;
   }
 
-  #section-4 p, #section-5 p {
+  #section-4 p {
     grid-column: 2/3;
   }
 
   #section-5 p {
     grid-column: 2/4;
+    padding: 1em 0 4em 0;
   }
 
   .pictureGrid {
@@ -187,29 +267,44 @@ p {
 
   .pictureGrid a {
     justify-self: end;
+  }
+
+  #section-6 {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+
+#section-6 a {
+  padding: 2em 0;
   }
 
   #footer {
-    grid-column: ;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
   }
 }
 
-@media(min-width: 1050px) {
+@media(min-width: 850px) {
+
+  .researchPicGrid {
+    width: 60%;
+  }
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 10fr 10fr 1fr;
     grid-column-gap: 1em;
   }
 
   .section-1and2Grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 10fr 10fr 1fr;
   }
 
   .pictureGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
+    padding: 0 2em 5em 2em;
   }
 
   .pictureGrid a {
@@ -218,8 +313,39 @@ p {
 
 }
 
+@media(min-width: 1150px) {
 
-@media(min-width: 1400px) {
+  .researchPicGrid {
+    width: 70%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-column-gap: 1em;
+  }
+
+  .section-1and2Grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+  }
+
+  .pictureGrid {
+    grid-template-columns: repeat(2, 2fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
+    padding: 0 2em 5em 2em;
+  }
+
+  .pictureGrid a {
+    justify-self: end;
+  }
+
+}
+
+@media(min-width: 1500px) {
+
+  .researchPicGrid {
+    width: 55%;
+  }
 
   .grid {
     display: grid;
@@ -230,11 +356,6 @@ p {
   .section-1and2Grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  .pictureGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
   }
 
 }

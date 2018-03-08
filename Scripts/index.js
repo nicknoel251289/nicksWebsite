@@ -22,8 +22,8 @@ $(document).ready(function(){
         $('.art-grid').css('opacity', '0');
       }
 
-      var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top;
+      var sideNavPosition = $('#section-4').position(); //same exact code as caseStuy above lel
+      var sideNavPositionY = sideNavPosition.top - 700;
       /* if (position > sideNavPositionY) {
         $('.sideNav').css('height', '60px');
         $('div.sideNav > ul > li > a').css('display', 'block');

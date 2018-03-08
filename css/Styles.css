@@ -35,6 +35,12 @@ p {
   padding: 1em 0;
 }
 
+a,
+a:hover,
+a:visited {
+  color: white;
+}
+
 .btn-outline {
   position: relative;
   top: 220px;
