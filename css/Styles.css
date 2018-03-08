@@ -110,6 +110,10 @@ div.background-image{
   padding: 0 1.2em;
 }
 
+.content-wrap div {
+  margin-bottom: 1em;
+}
+
 /* Case Studies */
 #section-1 {
   background: #181818;
@@ -234,6 +238,10 @@ div.background-image{
     grid-template-columns: 1fr 1fr 1fr; /* Can use %, em's, px's, fr's */
   }
 
+  .content-wrap {
+    display: block;
+  }
+
   #section-1 {
     padding: 5em 0;
   }
@@ -273,7 +281,7 @@ div.background-image{
   .sideNav {
     position: fixed;
     top: -100;
-    background: #111111;
+    background: #222;
     width: 100%;
     transition: height 1s;
     z-index: 500;
@@ -282,6 +290,7 @@ div.background-image{
   }
 
   .sideNav a {
+    color: #999;
     position: relative;
     justify-content;
     z-index: 500;
@@ -290,7 +299,7 @@ div.background-image{
   }
 
   .sideNav a:visited{
-    color: white;
+    color: #999;
     z-index: 500;
   }
 

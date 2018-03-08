@@ -107,14 +107,12 @@ $(document).ready(function(){
   /////////////////////////////////////////
   // Turn of sideNav when resizing window//
   /////////////////////////////////////////
-  /* $(window).resize(function() {
-    var windowWidth = $(this).innerWidth();
+  var windowInnerWidth = $(this).innerWidth();
 
-    if (windowWidth < 1190){
+    if(windowInnerWidth < 811){
       $('.sideNav').css('display', 'none');
-    } else if (windowWidth > 1190){
+    } else if (windowWidth > 811){
       $('.sideNav').css('display', 'block');
     }
-  }); */
 
 });
