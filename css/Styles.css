@@ -174,8 +174,12 @@ div.background-image{
 }
 
 .art-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
   opacity: 0;
   transition: opacity 7s;
+
 }
 
 .artbtn {
@@ -296,7 +300,6 @@ div.background-image{
   }
 
   .art-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Can use %, em's, px's, fr's */
   }
 

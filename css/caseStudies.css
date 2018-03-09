@@ -1,0 +1,150 @@
+body {
+  margin:0;
+  font-family: 'Lato', sans-serif;
+  background: #ffffff;
+  color: #6d6d6d;
+  font-size: .9em;
+  line-height: 1.5;
+  text-align: center;
+  overflow-x: hidden;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+img {
+  display: block; /* This displays it across the width of the whole screen*/
+  width: 100%; /* of it's container. ATM which is the div tag w/id of card*/
+  height: auto;
+  border-radius: 5px;
+}
+
+h1, h4 {
+  margin: 0;
+  padding: 1em 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: initial;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 6px 1px #888888;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+a,
+a:hover,
+a:visited {
+  color: white;
+}
+
+.nav {
+  position: block;
+  background: #222;
+  width: 100%;
+  z-index: 500;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.nav a {
+  color: #999;
+  position: relative;
+  justify-content;
+  z-index: 500;
+  text-decoration: none;
+  padding: 1.5em 0;
+}
+
+.nav a:hover {
+  background: white;
+  color: #999;
+}
+
+.nav a:visited{
+  color: #999;
+  z-index: 500;
+}
+
+#section-1 {
+  background: white;
+  padding: 2em;
+}
+
+#section-1 ul {
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+#section-1 ul li {
+  background: #e1e1e1;
+  margin-bottom: 1em;
+  color: #222222;
+  border-radius: 10px 10px 10px 10px;
+  border: 3px solid #e1e1e1;
+  box-shadow: 0px 0px 6px 1px #888888;
+}
+
+
+/* Case Study fade-in/out */
+
+.card img {
+  border-radius: 10px 10px 0 0
+}
+
+.card_content {
+  padding-bottom: 1em;
+}
+
+#footer {
+  display: grid;
+  padding: 2em;
+  background: #222222;
+  color: #bfbfbf;
+  text-align: center;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #e29207;
+}
+
+@media(min-width: 750px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr; /* Can use %, em's, px's, fr's */
+  }
+
+  #section-1 {
+    padding: 5em 0;
+  }
+
+  #section-1 h2 {
+    grid-column: 2/4;
+  }
+
+  #section-1 ul {
+    display: flex; /* Aligns the cards on the same row, like floating them all left or like inline-block */
+    justify-content: space-around;
+    padding: 3.5em 0;
+    grid-column: 2/4;
+  }
+
+  #section-1 li {
+    width: 40%;
+  }
+
+  #section-1 p {
+    padding: .1em 1em;
+    letter-spacing: -.03em;
+  }
+
+  .card:hover {
+    border-radius: 10px;
+  }
+}
