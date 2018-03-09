@@ -116,10 +116,19 @@ a:visited {
   text-decoration: none;
   }
 
+  .lastnextbtn {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+
+  .lastnextbtn a {
+    padding: 1em 0;
+  }
+
 /* Footer */
 #footer {
   padding: 2em;
-  background: #111111;
+  background: #222;
   color: #bfbfbf;
   text-align: center;
 }
