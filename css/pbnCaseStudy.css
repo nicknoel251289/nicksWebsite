@@ -39,6 +39,34 @@ a:visited {
   color: #777;
 }
 
+.nav {
+  position: block;
+  background: #222;
+  width: 100%;
+  z-index: 500;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.nav a {
+  color: #999;
+  position: relative;
+  justify-content;
+  z-index: 500;
+  text-decoration: none;
+  padding: 1.5em 0;
+}
+
+.nav a:hover {
+  background: white;
+  color: #999;
+}
+
+.nav a:visited{
+  color: #999;
+  z-index: 500;
+}
+
 #section-0, #section-1, #section-2, #section-3, #section-3a, #section-4, #section-4a, #section-5 {
   padding: 2em 1em;
 }

@@ -7,6 +7,9 @@ body {
   line-height: 1.5;
   text-align: center;
   overflow-x: hidden;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 img {
@@ -74,29 +77,19 @@ a:visited {
   padding: 1em;
 }
 
-.main {
-  min-height: 89.3%;
-}
-
 #footer {
   display: grid;
   padding: 2em;
   background: #222222;
   color: #bfbfbf;
   text-align: center;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 #footer a {
   text-decoration: none;
   color: #e29207;
-}
-
-@media(min-width: 360px) {
-
-  .main {
-    min-height: 89.3%;
-  }
-
 }
 
 @media(min-width: 640px) {
@@ -108,10 +101,6 @@ a:visited {
 }
 
 @media(min-width: 730px) {
-
-  .main {
-    min-height: 91.3%;
-  }
 
   .pictureGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -155,10 +144,6 @@ a:visited {
 }
 
 @media(min-width: 1000px) {
-
-  .main {
-    min-height: 91.5%;
-  }
 
   .pictureGrid {
     grid-template-columns: repeat(5, 1fr);
