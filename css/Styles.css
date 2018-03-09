@@ -43,10 +43,11 @@ a:visited {
 
 .btn-outline {
   position: relative;
-  top: 220px;
+  top: 226px;
   display: inline-block;
   border: 1px solid white;
-  -webkit-transition: width 1s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
+  -webkit-transition: width .5s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
+  border-radius: 5px;
 }
 
 .btn-outline:hover {
@@ -55,18 +56,18 @@ a:visited {
 
 .btn {
   width: 190px;
-  height: 40px;
+  height: 43px;
   position: relative;
-  top: 8px;
+  top: 11px;
   display: inline-block; /* Did not want it to span the screen so we used INLINE-block. We did this si it was overlapping the elements above and blow. */
   color: 222222;
   text-decoration: none;
-  -webkit-transition: width 1s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
+  -webkit-transition: width .5s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
 }
 
 .btn:hover {
   color: white;
-  width: 280px;
+  width: 260px;
 }
 
 .btn:visited {
@@ -255,6 +256,24 @@ div.background-image{
   color: white;
 }
 
+.family {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-column-gap: 1em;
+}
+
+.family img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: span 4;
+  padding-top: 1em;
+  grid-column-gap: .5em;
+}
 
 /* Footer */
 #footer {
@@ -401,6 +420,10 @@ div.background-image{
     grid-column: 2/4;
   }
 
+  #section-4 div {
+    padding: 0;
+  }
+
   #section-4, #section-4 p {
     padding: 2em 0;
   }
@@ -408,4 +431,35 @@ div.background-image{
   #footer div, .box {
     grid-column: span 2;
   }
+}
+
+@media(min-width: 1050px) {
+
+  #section-4 p {
+    padding-bottom: 4em;
+  }
+}
+
+@media(min-width: 1300px) {
+
+  .family {
+    grid-column-gap: 5em;
+  }
+
+  .members {
+    grid-column-gap: 5.2em;
+  }
+
+}
+
+@media(min-width: 1600px) {
+
+  .family {
+    grid-column-gap: 7em;
+  }
+
+  .members {
+    grid-column-gap: 7.2em;
+  }
+
 }
