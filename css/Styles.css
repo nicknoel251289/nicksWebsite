@@ -149,6 +149,24 @@ div.background-image{
   padding-bottom: 1em;
 }
 
+.csbtn {
+  padding: 2em 3em 1em 3em;
+
+}
+
+.csbtn a{
+  border: 1px solid #666;
+  padding: 1em 3em;
+  color: #666;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.csbtn a:hover{
+  background: white;
+  color: #222;
+}
+
 /* Art work */
 #section-2 {
   padding: 7em 0;
@@ -158,6 +176,27 @@ div.background-image{
 .art-grid {
   opacity: 0;
   transition: opacity 7s;
+}
+
+.artbtn {
+  padding-top: 6em;
+}
+
+.artbutton {
+  padding: 1em 3em;
+}
+
+.artbtn a{
+  border: 1px solid #666;
+  padding: 1em 3em;
+  color: #666;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.artbtn a:hover{
+  background: white;
+  color: #222;
 }
 
 #section-2 p {
@@ -189,6 +228,29 @@ div.background-image{
   background: #222222;
   color: #bfbfbf;
 }
+
+.button {
+  background: white;
+  color: #222222;
+}
+
+.contactbtn {
+  padding: 2em;
+}
+
+.contactbtn a{
+  background: white;
+  color: #222222;
+  padding: 1em 3em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contactbtn a:hover{
+  background: #222;
+  color: white;
+}
+
 
 /* Footer */
 #footer {
@@ -269,6 +331,10 @@ div.background-image{
     border-radius: 10px;
   }
 
+  .csbtn {
+    grid-column: 2/4;
+  }
+
   #section-1 ul li:hover {
     border: 3px solid white;
   }
@@ -303,8 +369,8 @@ div.background-image{
     z-index: 500;
   }
 
-  #section-2 a{
-    padding: .5em;
+  .art-grid a {
+    padding: 0 .5em;
   }
 
   #section-3 {
@@ -333,7 +399,7 @@ div.background-image{
   }
 
   #section-4, #section-4 p {
-    padding: 3em 0;
+    padding: 2em 0;
   }
 
   #footer div, .box {
