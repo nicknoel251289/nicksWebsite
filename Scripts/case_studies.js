@@ -23,7 +23,7 @@ $(document).ready(function(){
       }
 
       var sideNavPosition = $('#section-5').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top - 504;
+      var sideNavPositionY = sideNavPosition.top - 704;
       console.log(sideNavPositionY);
       console.log(position);
       /* if (position > sideNavPositionY) {
