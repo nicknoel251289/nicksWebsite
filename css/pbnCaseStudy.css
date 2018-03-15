@@ -71,42 +71,60 @@ a:visited {
   padding: 2em 1em;
 }
 
+#section-0 h2 {
+  color: #3DBDAB;
+}
+
+#section-2 ul {
+  text-align: left;
+}
+
+/*My Role + Goals & Objective */
 .section-1and2Grid {
-  background: #222222;
-  color: #999;
-}
-
-#section-3 div {
-  justify-self: center;
-}
-
-#section-0 img, #section-3 img, #section-3a img {
-  box-shadow: 0px 0px 6px 1px #888888;
-}
-
-#section-4, #section-4a {
-  background: #222222;
-  color: #999999;
+  background: #3DBDAB;
+  color: #111;
 }
 
 #section-3a p {
   padding-bottom: 3em;
 }
 
-#section-4a p {
-  padding-bottom: 3em;
+#section-3 div {
+  justify-self: center;
 }
 
 #section-3a div {
   padding-bottom: 2em;
 }
 
-#section-4a div {
-  padding-bottom: 1em;
+#section-0 img, #section-3 img, #section-3a img, .personapic img, .conclusiongrid img {
+  box-shadow: 0px 0px 6px 1px #888888;
+}
+
+#section-4 {
+  background: #222222;
+  color: #999999;
 }
 
 #section-4 p {
   padding-top: 0;
+}
+
+#section-4a {
+  background: #3DBDAB;
+}
+
+#section-4a p {
+  padding-bottom: 3em;
+  color: #111;
+}
+
+#section-4a h3 {
+  color: #111;
+}
+
+#section-4a div {
+  padding-bottom: 1em;
 }
 
 .pictureGrid {
@@ -115,18 +133,37 @@ a:visited {
   grid-gap: .5em;
 }
 
+.personaPic {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 2/4;
+  grid-row-gap: .5em;
+}
+
 .researchPicGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: .5em;
 }
 
-.personaPic img{
-  padding-bottom: 1em;
+#section-5 {
+  padding-bottom: 3em
 }
 
-#section-2 ul {
-  text-align: left;
+#section-5 .conclusiongrid {
+  grid-column: 2/4;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-gap: .5em;
+  padding-top: 1.5em;
+}
+
+#section-5 a {
+  text-decoration: none;
+}
+
+#section-5 img {
+  border: .50px solid #888;
 }
 
 #section-6 {
@@ -139,7 +176,7 @@ a:visited {
 }
 
 #section-6 a:hover {
-  background: white;
+  background: #3DBDAB;
   color: black;
   text-decoration: none;
   }
@@ -184,6 +221,7 @@ a:visited {
   .pictureGrid a {
     justify-self: end;
   }
+
 }
 
 @media(min-width: 775px) {
@@ -268,7 +306,8 @@ a:visited {
   }
 
   #section-3 p {
-    grid-column: 3/4;
+    grid-column: 3/5;
+    padding-right: 4em;
   }
 
   #section-3 h3 {
@@ -324,7 +363,7 @@ a:visited {
 @media(min-width: 850px) {
 
   .researchPicGrid {
-    width: 60%;
+    width: 75%;
   }
 
   .grid {
@@ -352,14 +391,14 @@ a:visited {
 
 @media(min-width: 1150px) {
 
-  .researchPicGrid {
-    width: 70%;
-  }
-
   .grid {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-column-gap: 1em;
+  }
+
+  #section-3 p {
+    padding-right: 5em;
   }
 
   .section-1and2Grid {
@@ -378,10 +417,18 @@ a:visited {
 
 }
 
+@media(min-width: 1350px) {
+
+  #section-3 p {
+    padding-right: 12em;
+  }
+
+}
+
 @media(min-width: 1500px) {
 
-  .researchPicGrid {
-    width: 55%;
+  #section-3 p {
+    padding-right: 18em;
   }
 
   .grid {
@@ -393,6 +440,17 @@ a:visited {
   .section-1and2Grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media(min-width: 1700px) {
+
+  .researchPicGrid {
+    width: 70%;
+  }
+
+  #section-3 p {
+    padding-right: 27em;
   }
 
 }
