@@ -92,10 +92,6 @@ h2 {
   color: #fd3600;
 }
 
-#section-3 div {
-  justify-self: center;
-}
-
 #section-0 img, #section-3 img, #section-3a img {
   box-shadow: 0px 0px 6px 1px #888888;
 }
@@ -138,9 +134,11 @@ h2 {
 
 .researchPicGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: .5em;
 }
+
+
 
 .personaPic img{
   padding-bottom: 1em;
@@ -203,6 +201,10 @@ h2 {
     padding: 0 9em;
   }
 
+  .researchPicGrid {
+    padding: 0 7em;
+  }
+
   .personaPic {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -214,10 +216,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(1, 1fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
     padding: 1em;
-  }
-
-  .pictureGrid a {
-    justify-self: end;
+    padding: 1em 6em;
   }
 
   .section-1and2Grid {
@@ -248,6 +247,13 @@ h2 {
     padding-top: 0;
   }
 
+  .researchPicGrid {
+    padding: 0 11em;
+  }
+  .pictureGrid {
+    padding: 1em 11em;
+  }
+
 }
 
 @media(min-width: 775px) {
@@ -264,7 +270,12 @@ h2 {
   .researchPicGrid {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1em;
-    padding-top: 2em;
+    padding: 2em 2em 0em 2em;
+
+  }
+
+  .pictureGrid {
+    padding: 1em 4em;
   }
 
   .sideNav {
@@ -351,10 +362,6 @@ h2 {
     padding: 1em 0 4em 0;
   }
 
-  .pictureGrid a {
-    justify-self: end;
-  }
-
   #section-6 {
     grid-template-columns: 1fr 1fr;
     display: grid;
@@ -377,6 +384,8 @@ h2 {
   }
 
   .researchPicGrid {
+    position: relative;
+    left: 7em;
     width: 60%;
   }
 
@@ -389,12 +398,6 @@ h2 {
   .section-1and2Grid {
     display: grid;
     grid-template-columns: 1fr 10fr 10fr 1fr;
-  }
-
-  .pictureGrid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
-    padding: 0 2em 5em 2em;
   }
 
   .pictureGrid a {
@@ -430,10 +433,6 @@ h2 {
 
   #section-0 a {
     padding: 0 7em;
-  }
-
-  .researchPicGrid {
-    width: 70%;
   }
 
   .grid {
