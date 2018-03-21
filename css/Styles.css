@@ -8,7 +8,7 @@
 body {
   margin:0;
   font-family: 'Lato', sans-serif;
-  background: #181818;
+  background: white;
   color: #6d6d6d;
   font-size: .9em;
   line-height: 1.5;
@@ -25,7 +25,7 @@ img {
 h1, h2, h3, h4 {
   margin: 0;
   padding: 1em 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: initial;
   letter-spacing: 2px;
 }
@@ -43,12 +43,14 @@ a:visited {
 
 .btn-outline {
   position: relative;
-  top: 226px;
+  top: 230px;
   display: inline-block;
-  border: 1px solid white;
-  -webkit-transition: width .5s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
+  border: 1px solid #222;
   border-radius: 5px;
+  background: #444;
+  height: 40px;
 }
+
 
 .btn-outline:hover {
   background: #74236b;
@@ -60,14 +62,11 @@ a:visited {
   position: relative;
   top: 11px;
   display: inline-block; /* Did not want it to span the screen so we used INLINE-block. We did this si it was overlapping the elements above and blow. */
-  color: 222222;
   text-decoration: none;
-  -webkit-transition: width .5s, margin 2s, border 2s, border-radius 1s, background 1.5s, color 1s, top 4s;
 }
 
 .btn:hover {
   color: white;
-  width: 260px;
 }
 
 .btn:visited {
@@ -77,35 +76,36 @@ a:visited {
 
 /* Header */
 #header {
+  position: relative;
   margin: 0;
-  min-height: 675px;
   text-align: center;
   position: relative;
-  border-bottom: 2px solid #999999;
+  padding-bottom: 6em;
+  height: 640px;
 }
 
-div.background-image{
-  position: fixed; /* Because we want it to go over the header div above */
-  background-image: url(../Pictures/starry.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%; /* You will not see anything until you disclose it's size*/
-  min-height: 675px; /* We want it to the the height of it's parent element of 450px. But I believe this will auto do that*/
-  z-index: -200;
-  height: 1080px;
+#header img {
+  display: none;
 }
 
 #header h1 {
   position: relative;
   top: 200px;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: white;/*#6e211a*/
+  padding: 0 0 0 0;
+  color: #444;/*#6e211a*/
   font-weight: 400;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Anton', sans-serif;
 }
 
-#header .content-wrap,
+.header_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: .5em;
+}
+.header_wrap div {
+  grid-column: 2/3;
+}
+
 #section-2 .content-wrap,
 #section-3 .content-wrap {
   padding: 0 1.2em;
@@ -117,8 +117,9 @@ div.background-image{
 
 /* Case Studies */
 #section-1 {
-  background: #181818;
+  background: white;
   padding: 2em;
+  border-bottom: 1px solid #999;
 }
 
 #section-1 ul {
@@ -133,13 +134,18 @@ div.background-image{
   color: #222222;
   border-radius: 10px 10px 10px 10px;
   border: 3px solid #e1e1e1;
+  box-shadow: 0px 0px 9px 2px #888;
+}
+
+#section-1 ul li:hover {
+  box-shadow: 0px 0px 9px 1px #111;
 }
 
 
 /* Case Study fade-in/out */
 .CS-appear {
   opacity: 0;
-  transition: opacity 7s;
+  transition: opacity 3s;
 }
 
 .card img {
@@ -156,31 +162,40 @@ div.background-image{
 }
 
 .csbtn a{
-  border: 1px solid #666;
+  border: 1px solid #111;
   padding: 1em 3em;
-  color: #666;
+  color: #111;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .csbtn a:hover{
-  background: white;
-  color: #222;
+  background: #111;
+  color: #999;
 }
 
 /* Art work */
 #section-2 {
   padding: 7em 0;
-  background: #111111;
+  color: #222;
+  background: white; /* #97d7b5; */
+  border-bottom: 1px solid #999;
 }
 
 .art-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1em;
+  grid-gap: 1em;
   opacity: 0;
-  transition: opacity 7s;
+  transition: opacity 3s;
+}
 
+.art-grid img {
+  box-shadow: 0px 0px 9px 2px #666;
+}
+
+.art-grid img:hover {
+  box-shadow: 0px 0px 4px 1px #111;
 }
 
 .artbtn {
@@ -200,8 +215,8 @@ div.background-image{
 }
 
 .artbtn a:hover{
-  background: white;
-  color: #222;
+  background: #111;
+  color: #999;
 }
 
 #section-2 p {
@@ -209,14 +224,10 @@ div.background-image{
   padding: 4em 0;
 }
 
-#section-2 img{
-  padding: .5em 0;
-}
-
 /* Who am I?! */
 #section-3 {
   padding: 5em 2em;
-  background: #f1f1f1;
+  background: white;
 }
 
 /* Section 4 / BOXES CONTACT AND FAMILY*/
@@ -225,7 +236,7 @@ div.background-image{
 }
 
 #section-4 .box:first-child {
-  background: #a9e1c6;
+  background: #97d7b5;
   color: #222222;
 }
 
@@ -291,31 +302,45 @@ div.background-image{
 /* MEDIA QUERY */
 @media(min-width: 600px) {
 
-  main, footer {
-    /* margin: 0 10% 0 10%; */
-  }
-  /*header .background-image{
-    margin: 0 10% 10%;
-    max-width: 80%;
-    height: 100%;
-    left: 0;
-  }*/
-
   h1, h2, h3, h4 {
     text-transform: uppercase;
   }
 
   #header {
+    display: grid;
+    grid-template-columns: 1fr 10fr 10fr 1fr;
     height: 1080px;
   }
 
-  div.background-image {
-    height: 1080px;
+  #header h1 {
+    grid-column: 3/4;
+    position: relative;
+    top: 30px;
+  }
+
+  #header img {
+    width: auto;
+    height: 100%;
+    position: fixed;
+    z-index: -200;
+    display: block;
+  }
+
+  .header_wrap {
+    grid-column: 3/4;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 140px;
+    position: relative;
+    top: -380px;
+  }
+
+  .btn-outline {
+    top: 110px;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr; /* Can use %, em's, px's, fr's */
+    grid-template-columns: 1fr repeat(2, minmax(auto, 38em)) 1fr; /* Can use %, em's, px's, fr's */
   }
 
   .art-grid {
@@ -368,7 +393,7 @@ div.background-image{
 
   .sideNav {
     position: fixed;
-    top: -100;
+    top: -10000px;
     background: #222;
     width: 100%;
     transition: height 1s;
@@ -391,20 +416,12 @@ div.background-image{
     z-index: 500;
   }
 
-  .art-grid a {
-    padding: 0 .5em;
-  }
-
   #section-3 {
     padding: 5em 1em;
   }
 
   #section-3 h2 {
     padding: 1em 0 4em 0;
-  }
-
-  #section-3 .content-wrap {
-    padding: 1em 3em;
   }
 
   #section-3 .content-text {
@@ -420,8 +437,12 @@ div.background-image{
     grid-column: 2/4;
   }
 
+  #section-4 {
+    padding-top: 2em;
+  }
+
   #section-4 div {
-    padding: 0;
+    padding: .5em;
   }
 
   #section-4, #section-4 p {
@@ -433,7 +454,67 @@ div.background-image{
   }
 }
 
+@media(min-width: 750px) {
+
+  #header {
+    grid-template-columns: 1fr 8fr 8fr 1fr;
+  }
+
+  #header h1 {
+    grid-column: 3/4;
+    top: 100px;
+  }
+
+  #header img {
+    width: auto;
+    height: 900px;
+    position: fixed;
+    z-index: -200;
+    display: block;
+  }
+
+  .header_wrap {
+    grid-column: 3/4;
+    top: -200px;
+  }
+
+  .btn-outline {
+    top: 0;
+  }
+}
+
+
+
 @media(min-width: 1050px) {
+
+  #header {
+    grid-template-columns: 1fr 8fr 8fr 1fr;
+  }
+
+  #header h1 {
+    grid-column: 3/4;
+    top: 200px;
+  }
+
+  #header h1 {
+    grid-column: 3/4;
+  }
+
+  .header_wrap {
+    grid-template-columns: 190px 190px 190px;
+    justify-content: center;
+    top: -200px;
+  }
+
+  .header_wrap .one {
+    grid-column: 1/2;
+  }
+  .header_wrap .two {
+    grid-column: 2/3;
+  }
+  .header_wrap .three {
+    grid-column: 3/4;
+  }
 
   #section-4 p {
     padding-bottom: 4em;
@@ -441,6 +522,14 @@ div.background-image{
 }
 
 @media(min-width: 1300px) {
+
+  #header h1 {
+    top: 200px;
+  }
+
+  .header_wrap {
+    top: -200px;
+  }
 
   .family {
     grid-column-gap: 5em;
@@ -453,6 +542,19 @@ div.background-image{
 }
 
 @media(min-width: 1600px) {
+
+  #header {
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+  }
+
+  #header h1 {
+    grid-column: 3/4;
+    top: 200px;
+  }
+
+  .header_wrap {
+    top: -200px;
+  }
 
   .family {
     grid-column-gap: 7em;
