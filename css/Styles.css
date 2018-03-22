@@ -10,7 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   background: white;
   color: #6d6d6d;
-  font-size: .9em;
+  font-size: 1em;
   line-height: 1.5;
   text-align: center;
   overflow-x: hidden;
@@ -62,9 +62,10 @@ a:visited {
   width: 190px;
   height: 43px;
   position: relative;
-  top: 11px;
+  top: 8px;
   display: inline-block; /* Did not want it to span the screen so we used INLINE-block. We did this si it was overlapping the elements above and blow. */
   text-decoration: none;
+  font-size: .9em;
 }
 
 .btn:hover {
@@ -129,51 +130,22 @@ a:visited {
   margin-bottom: 1em;
 }
 
+
+
+
 /* Case Studies */
 #section-1 {
   background: white;
   padding: 2em;
 }
-
-#section-1 ul {
-  list-style: none;
-  margin: 0;
-  padding:0;
-}
-
-#section-1 ul li {
-  background: #e1e1e1;
-  margin-bottom: 1em;
-  color: #222222;
-  border-radius: 10px;
-  border: 3px solid #e1e1e1;
-  box-shadow: 0px 0px 9px 2px #888;
-}
-
-#section-1 ul li:hover {
-  box-shadow: 0px 0px 9px 1px #111;
-}
-
-
-/* Case Study fade-in/out */
-.CS-appear {
+/* Case Study fade-in/out
+.cs1, .cs2 {
   opacity: 0;
   transition: opacity 3s;
-}
-
-.card img {
-  border-radius: 10px 10px 0 0
-}
-
-.card_content {
-  padding-bottom: 1em;
-}
-
+} */
 .csbtn {
-  padding: 2em 3em 1em 3em;
-
+  padding: 4em 3em 1em 3em;
 }
-
 .csbtn a{
   border: 1px solid #111;
   padding: 1em 3em;
@@ -181,17 +153,31 @@ a:visited {
   text-decoration: none;
   border-radius: 5px;
 }
-
 .csbtn a:hover{
   background: #111;
   color: #999;
 }
+.cs1, .cs2 {
+  padding-top: 3em;
+}
+.cs1info, .cs2info {
+  border-bottom: 1px solid #555;
+}
+.cs1info h3 {
+  color: #fd3600;
+}
+.cs2info h3 {
+  color: #1baa9b;
+}
+
 
 /* Art work */
 #section-2 {
   padding: 7em 0;
-  color: #222;
   background: white; /* #97d7b5; */
+}
+#section-2 h2 {
+  color: #666;
 }
 
 .art-grid {
@@ -248,7 +234,7 @@ a:visited {
 }
 
 #section-4 .box:first-child {
-  background: #97d7b5;
+  background: white;
   color: #222222;
 }
 
@@ -260,6 +246,7 @@ a:visited {
 .button {
   background: white;
   color: #222222;
+  border: 1px solid #555;
 }
 
 .contactbtn {
@@ -369,18 +356,41 @@ a:visited {
   }
 
   #section-1 {
-    padding: 5em 0;
+    grid-template-rows: .5fr 1fr .5fr .5fr;
+    grid-gap: 1em;
   }
-
   #section-1 h2 {
     grid-column: 2/4;
+    grid-row: 1/2;
+  }
+  .cs1 {
+    grid-column: 2/3;
+    grid-row: 2/3
+  }
+  .cs2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .cs1info {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+    padding: 0;
+    border-bottom: 0px solid white;
+  }
+  .cs2info {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    text-align: center;
+    padding: 0;
+    border-bottom: 0px solid white;
   }
 
-  #section-1 ul {
-    display: flex; /* Aligns the cards on the same row, like floating them all left or like inline-block */
+/*  #section-1 ul {
+    display: flex; /* Aligns the cards on the same row, like floating them all left or like inline-block
     justify-content: space-around;
     padding: 3.5em 0;
-  }
+  } */
 
   #section-1 li {
     width: 40%;
@@ -403,11 +413,6 @@ a:visited {
     border: 3px solid white;
   }
 
-  /* .navCenter {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  } */
-
   .sideNav {
     position: fixed;
     top: -10000px;
@@ -426,6 +431,7 @@ a:visited {
     z-index: 500;
     text-decoration: none;
     transition: 1s;
+    font-family: 'Anton', sans-serif;
   }
 
   .sideNav a:visited{
@@ -497,6 +503,10 @@ a:visited {
   .btn-outline {
     top: 0;
   }
+
+  #section-2 p {
+    padding: 3em 1em;
+  }
 }
 
 
@@ -530,6 +540,41 @@ a:visited {
   }
   .header_wrap .three {
     grid-column: 3/4;
+  }
+
+  #section-1 {
+    padding: 5em 0;
+    grid-gap: 2.5em;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
+  }
+
+  #section-1 h2 {
+    grid-column: 2/4;
+  }
+
+  .cs1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .cs2 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .cs1info {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    padding-top: 2.5em;
+    padding-right: 5em;
+    border-bottom: 0px solid white;
+  }
+  .cs2info {
+    grid-column: 2/3;
+    padding-top: 2.5em;
+    padding-left: 5em;
+    border-bottom: 0px solid white;
+  }
+  .cs1info p, .cs2info p {
+    text-align: left;
   }
 
   #section-4 p {
