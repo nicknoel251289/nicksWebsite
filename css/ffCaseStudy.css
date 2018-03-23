@@ -32,6 +32,10 @@ div, p {
 p {
   padding: 1em;
 }
+a,
+a:visited {
+  color: #777;
+}
 
 .nav {
   position: block;
