@@ -100,6 +100,10 @@ a:visited {
   text-align: left;
 }
 
+/* #section-3 img {
+  box-shadow: 0px 0px 10px 1px #919191;
+} */
+
 
 .grid {
   padding: 0 2em;
@@ -227,14 +231,11 @@ a:visited {
   .personaPic {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 2/4;
+    grid-column: 1/5;
     grid-column-gap: .5em;
   }
   .pictureGrid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
-    padding: 1em;
-    padding: 1em 6em;
+    grid-column: 1/5;
   }
 
 }
@@ -247,10 +248,6 @@ a:visited {
   }
   .rp4 {
     grid-column: 2/3;
-  }
-
-  .pictureGrid {
-    padding: 1em 11em;
   }
 
   .section-2grid {
@@ -308,9 +305,6 @@ a:visited {
       padding-top: 9em;
   }
 
-  .pictureGrid {
-    padding: 1em 4em;
-  }
   .sideNav {
     position: fixed;
     top: -100;
@@ -370,8 +364,7 @@ a:visited {
   }
 
   .pictureGrid {
-    grid-template-columns: repeat(1, 2fr); /* could do repeat(3, 1fr 2fr); and it would make 3 column containing the 1fr and 2fr*/
-    padding: 0 2em 5em 2em;
+    grid-column: 1/5;
   }
 
 }
