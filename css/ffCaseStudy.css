@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
   color: #fd3600;
   font-family: 'Anton', sans-serif;
   font-weight: initial;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   padding-bottom: 2.5em;
 }
 img {
@@ -175,6 +175,8 @@ a:visited {
 /* Next and Last button */
 .nextlast a {
   text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  padding: 1.5em 0;
 }
 .nextlast a:hover {
   background: #fd3600;
@@ -185,10 +187,6 @@ a:visited {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.nextlast a {
-    padding: 1.5em 0;
-}
-
 
 /* Footer */
 #footer {
@@ -235,13 +233,12 @@ a:visited {
     grid-column-gap: .5em;
   }
   .pictureGrid {
-    grid-column: 1/5;
+    grid-column: 2/4;
   }
 
 }
 
 @media(min-width: 600px) {
-
 
   .rp3 {
     grid-column: 1/2;
@@ -252,7 +249,7 @@ a:visited {
 
   .section-2grid {
     display: grid;
-    grid-template-columns: .2fr 22fr 22fr .2fr;
+    grid-template-columns: .2fr 22fr 20fr .2fr;
   }
   .section-2a {
     grid-column: 2/3;
@@ -347,11 +344,16 @@ a:visited {
 
 @media(min-width: 1093px) {
 
+  p {
+    padding-left: 7em;
+    padding-right: 7em;
+  }
+
   #section-0 h1 {
     padding-top: 2em;
   }
   #section-0 p {
-      padding-top: 6em;
+      padding: 6em 0 0 0;
   }
 
   .grid {
@@ -363,8 +365,16 @@ a:visited {
     grid-column: 2/4;
   }
 
+  .section-2grid {
+    grid-gap: 2em;
+  }
+  #section-2 p{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .pictureGrid {
-    grid-column: 1/5;
+    grid-column: 2/4;
   }
 
 }
@@ -378,8 +388,6 @@ a:visited {
   .grid {
     padding: 0 19em;
   }
-
-
 }
 
 @media(min-width: 1500px) {
