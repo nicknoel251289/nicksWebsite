@@ -45,8 +45,6 @@ a:visited {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   font-family: 'Anton', sans-serif;
-  font-weight: initial;
-  letter-spacing: 2px;
 }
 .nav a {
   color: #999;
