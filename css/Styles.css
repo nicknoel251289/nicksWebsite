@@ -183,17 +183,18 @@ a:visited {
 .art-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
   opacity: 0;
   transition: opacity 3s;
+  grid-column-gap: 2em;
+  grid-row-gap: .5em;
 }
-
 .art-grid img {
-  box-shadow: 0px 0px 9px 2px #666;
+  box-shadow: 0px 0px 9px 1px #555;
+  border: 10px solid white;
 }
-
 .art-grid img:hover {
-  box-shadow: 0px 0px 4px 1px #111;
+  box-shadow: 0px 3.5px 50px 7px #a5a5a5;
+  transform: scale(1.1);
 }
 
 .artbtn {
