@@ -22,9 +22,9 @@ img {
 h1, h2, h3, h4 {
   margin: 0;
   padding: 1em 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: initial;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   box-shadow: 0px 0px 6px 1px #888888;
 }
 
@@ -46,6 +46,7 @@ a:visited {
   z-index: 500;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-family: 'Anton', sans-serif;
 }
 
 .nav a {
@@ -71,6 +72,14 @@ a:visited {
   grid-template-columns: repeat(2, 1fr);
   display: grid;
   grid-gap: 1em;
+}
+.pictureGrid img {
+  box-shadow: -2px 3.5px 60px 4px #a5a5a5;
+  border: 5px solid white;
+}
+.pictureGrid img:hover {
+  transform: scale(0.9);
+  box-shadow: 0px 0px 9px 1px #555;
 }
 
 #section-1art{

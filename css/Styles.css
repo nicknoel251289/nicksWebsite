@@ -157,8 +157,12 @@ a:visited {
   background: #111;
   color: #999;
 }
+
 .cs1, .cs2 {
   padding-top: 3em;
+}
+.cs1 img:hover, .cs2 img:hover {
+  transform: scale(1.05);
 }
 .cs1info, .cs2info {
   border-bottom: 1px solid #555;
@@ -193,7 +197,7 @@ a:visited {
   border: 10px solid white;
 }
 .art-grid img:hover {
-  box-shadow: 0px 3.5px 50px 7px #a5a5a5;
+  box-shadow: -2px 3.5px 60px 4px #a5a5a5;
   transform: scale(1.1);
 }
 
