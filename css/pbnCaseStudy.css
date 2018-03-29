@@ -15,12 +15,10 @@ main {
 
 h1, h2, h3, h4 {
   margin: 0;
-  padding: 1em 1em;
   color: #3DBDAB;
   font-family: 'Anton', sans-serif;
   font-weight: initial;
   letter-spacing: 1.5px;
-  padding-bottom: 2.5em;
   text-align: center;
 }
 
@@ -34,9 +32,6 @@ img {
 div, p {
   margin: 0;
 }
-p {
-  padding: 2em 3em;
-}
 
 a,
 a:hover,
@@ -44,6 +39,19 @@ a:visited {
   color: #777;
 }
 
+#section-1, #section-2, #section-3 p, #section-4, #section-5, #section-6, #section-7 {
+  padding: 4em 3em;
+  text-align: left;
+}
+.section-2a h2 {
+  padding-bottom: 2em;
+}
+.section-2b h2 {
+  padding: 2em 0;
+}
+#section-4 h2, #section-5 h2, #section-6 h2, #section-7 h2 {
+  padding-bottom: 2em;
+}
 
 /* nav bar top*/
 .nav {
@@ -78,18 +86,12 @@ a:visited {
 }
 
 /*Padding and seperating sections evenly */
-#section-0, #section-1, #section-2, #section-3,
-#section-4, #section-5, #section-6, #section-7 {
-  text-align: left;
-  padding: 4em 1em 3em 1em;
-}
 #section-0 {
   padding: 4em 1em;
 }
-#section-1 h2 {
-  padding-top: 3.5em;
+#section-0 h1 {
+  padding-bottom: 2em;
 }
-
 /*Seperating sections with GREEN background color and BLACK text */
  #section-1, #section-4, #section-4 h2, #section-6, #section-6 h2 {
   background: #3DBDAB;
@@ -102,15 +104,12 @@ a:visited {
   position: relative;
   text-align: center;
   padding: 5em 0;
-  grid-template-columns: .6fr 4fr 4fr .6fr;
+  grid-template-columns: .4fr 4fr 4fr .4fr;
   display: grid;
   max-height: 400px;
   overflow: hidden;
 }
 
-.grid {
-  padding: 2em 2em;
-}
 .aboutbg {
   z-index: 20;
   opacity: .15;
@@ -140,16 +139,12 @@ a:visited {
 #section-2b ul {
   padding-left: 0;
 }
-.section-2a p, .section-2b ul, .section-2b p {
-  text-align: left;
-}
 
 .researchGrid {
   grid-template-columns: 1fr 4fr 4fr 1fr;
   display: grid;
   grid-column: 2/4;
   grid-gap: 2em;
-  padding-bottom: 2em;
 }
 .centerpic {
   grid-column: 1/5;
@@ -231,12 +226,14 @@ a:visited {
 
 @media(min-width: 350px) {
 
-
+  #section-1 {
+    padding: 3em 0;
+  }
   #section-1 h2{
-    padding-top: 1em;
+    padding-top: 2em;
   }
   #section-1 p{
-    padding: 6em 3em 1em 3em;
+    padding: 7em 3em 1em 3em;
   }
 
 }
@@ -245,8 +242,7 @@ a:visited {
 
   .grid {
     display: grid;
-    grid-template-columns: 1.2fr 4fr 4fr 1.2fr;
-    padding: 0 5em;
+    grid-template-columns: .1fr 4fr 4fr .1fr;
   }
 
   h2, p {
