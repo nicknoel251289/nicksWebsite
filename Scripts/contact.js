@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
-  $('#formgrid').submit(function(){
-    $(".thankyou").fadeIn("1000");
-    return false;
-  });
 
-  $(".okay").click(function(){
-    $(".thankyou").fadeOut("1000");
-  });
+  /* $('.formgrid').submit(function(){
+      $('.thankyou').fadeIn(1000);
+      return false; //this line of code prevents formcarry from submitting
+    });
 
+    $('.okay').click(function(){
+      $('.thankyou').fadeOut(1000);
+    }); */
 
   var lastPosition = 0;
 
