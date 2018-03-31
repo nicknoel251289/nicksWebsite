@@ -193,13 +193,14 @@ a:visited {
   grid-template-columns: 1fr 1fr;
   opacity: 0;
   transition: opacity 3s;
-  grid-column-gap: 2em;
+  grid-column-gap: .5em;
   grid-row-gap: .5em;
 }
 .art-grid img {
-  box-shadow: 0px 0px 9px 1px #555;
-  border: 10px solid white;
   transition: .2s;
+  box-sizing: border-box;
+  border: 8px solid white;
+  box-shadow: -2px 3.5px 20px 1px #a5a5a5;
 }
 .art-grid img:hover {
   box-shadow: -2px 3.5px 60px 4px #a5a5a5;

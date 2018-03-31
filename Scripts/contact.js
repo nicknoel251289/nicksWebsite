@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+  $('#formgrid').submit(function(){
+    $(".thankyou").fadeIn("1000");
+    return false;
+  });
+
+  $(".okay").click(function(){
+    $(".thankyou").fadeOut("1000");
+  });
+
+
   var lastPosition = 0;
 
   $(document).scroll(function() {
@@ -22,21 +32,10 @@ $(document).ready(function(){
         $('.art-grid').css('opacity', '0');
       }
 
-      var sideNavPosition = $('#footer').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top - 900;
+      var sideNavPosition = $('#section-5').position(); //same exact code as caseStuy above lel
+      var sideNavPositionY = sideNavPosition.top - 704;
       console.log(sideNavPositionY);
       console.log(position);
-      /* if (position > sideNavPositionY) {
-        $('.sideNav').css('height', '60px');
-        $('div.sideNav > ul > li > a').css('display', 'block');
-        //$('div.sideNav > ul > li > a').animate({top: '0px'},700);
-        //$('.sideNav').animate({height: '60px'},700);
-      } else if (position < sideNavPositionY) {
-        $('.sideNav').css('height', '0');
-        $('div.sideNav > ul > li > a').css('display', 'none');
-        //$('div.sideNav > ul > li > a').animate({top: '-100px'},700);
-        //$('.sideNav').animate({height: '0px'},700);
-      } */
 
 
       if (lastPosition > position || position <= sideNavPositionY) {
@@ -55,9 +54,9 @@ $(document).ready(function(){
       }
 
       lastPosition = position;
-
-
   });
+
+
 
   $(window).resize(function(){
     var windowWidth = $(this).innerWidth();

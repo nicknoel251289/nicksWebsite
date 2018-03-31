@@ -74,12 +74,15 @@ a:visited {
   grid-gap: 1em;
 }
 .pictureGrid img {
-  box-shadow: -2px 3.5px 60px 4px #a5a5a5;
-  border: 5px solid white;
+  transition: .2s;
+  box-sizing: border-box;
+  border: 8px solid white;
+  box-shadow: -2px 3.5px 20px 1px #a5a5a5;
 }
 .pictureGrid img:hover {
-  transform: scale(0.9);
-  box-shadow: 0px 0px 9px 1px #555;
+  box-shadow: -2px 3.5px 60px 4px #a5a5a5;
+  transform: scale(1.1);
+  transition: .2s;
 }
 
 #section-1art{
