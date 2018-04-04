@@ -22,34 +22,34 @@ $(document).ready(function(){
         $('.art-grid').css('opacity', '0');
       }
 
-      var sideNavPosition = $('#section-4').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top - 700;
-      /* if (position > sideNavPositionY) {
-        $('.sideNav').css('height', '60px');
-        $('div.sideNav > ul > li > a').css('display', 'block');
-        //$('div.sideNav > ul > li > a').animate({top: '0px'},700);
-        //$('.sideNav').animate({height: '60px'},700);
-      } else if (position < sideNavPositionY) {
-        $('.sideNav').css('height', '0');
-        $('div.sideNav > ul > li > a').css('display', 'none');
-        //$('div.sideNav > ul > li > a').animate({top: '-100px'},700);
-        //$('.sideNav').animate({height: '0px'},700);
-      } */
+      var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
+      var sideNavPositionY = sideNavPosition.top + 100;
 
-
-      if (lastPosition > position || position <= sideNavPositionY) {
+      /*
+      console.log("My last position is " + lastPosition);
+      console.log("My new position is " + position);
+      console.log("My sideNavPositionY is " + sideNavPositionY);
+      */
+      
+      if (lastPosition > position && lastPosition > sideNavPositionY) {
+        $('.sideNav').animate({height: '60px'},10);
+        $('.sideNav').css('top', '0px');
+        $('div.sideNav > a').css('top', '0px');
+        //$('div.sideNav > a').css('margin', '20px');
+        //$('div.sideNav > a').animate({height: '60px'},10);
+        $('div.sideNav > a').animate({opacity: '1'},10);
+      } else if (lastPosition < position){
         //$('.sideNav').css('height', '0px');
         $('.sideNav').animate({height: '0px'},10);
         $('sideNav').css('top', '-100px');
         $('div.sideNav > a').css('top', '-100px');
         $('div.sideNav > a').animate({height: '0px'},10);
-      } else if (lastPosition < position){
-        $('.sideNav').animate({height: '60px'},10);
-        $('.sideNav').css('top', '0px');
-        $('div.sideNav > a').css('top', '0px');
-        $('div.sideNav > a').css('margin', '20px');
-        $('div.sideNav > a').animate({height: '60px'},10);
-        $('div.sideNav > a').animate({opacity: '1'},10);
+      } else if (position < sideNavPositionY){
+        //$('.sideNav').css('height', '0px');
+        $('.sideNav').animate({height: '0px'},10);
+        $('sideNav').css('top', '-100px');
+        $('div.sideNav > a').css('top', '-100px');
+        $('div.sideNav > a').animate({height: '0px'},10);
       }
 
       lastPosition = position;

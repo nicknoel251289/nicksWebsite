@@ -43,29 +43,32 @@ a:visited {
   color: white;
 }
 
+.introgold {
+  color: #a07f38;
+}
+
 .btn-outline {
   position: relative;
   top: 230px;
   display: inline-block;
   border: 1px solid #222;
   border-radius: 5px;
-  background: #444;
-  height: 40px;
 }
-
-
 .btn-outline:hover {
-  background: #74236b;
+  color: white;
+  background: #a07f38;
 }
-
+.btn-outline a:hover {
+  color: white;
+}
 .btn {
   width: 190px;
-  height: 43px;
   position: relative;
-  top: 8px;
+  padding: 14px 0;
   display: inline-block; /* Did not want it to span the screen so we used INLINE-block. We did this si it was overlapping the elements above and blow. */
   text-decoration: none;
   font-size: .9em;
+  color: black;
 }
 
 .btn:hover {
@@ -74,7 +77,7 @@ a:visited {
 
 .btn:visited {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .mobileimgcenter {
@@ -107,6 +110,7 @@ a:visited {
   position: relative;
   top: 140px;
   padding: 0 1em;
+  padding-bottom: 2em;
   color: #444;/*#6e211a*/
   font-weight: 400;
   font-family: 'Anton', sans-serif;
@@ -138,6 +142,9 @@ a:visited {
   background: white;
   padding: 2em;
 }
+#section-1 h1, #section-2 h1, #section-3 h1 {
+  font-size: 2em;
+}
 /* Case Study fade-in/out
 .cs1, .cs2 {
   opacity: 0;
@@ -154,37 +161,43 @@ a:visited {
   border-radius: 5px;
 }
 .csbtn a:hover{
-  background: #111;
-  color: #999;
+  color: white;
+  background: #a07f38;
 }
 
 .cs1, .cs2 {
   padding-top: 3em;
+  z-index: 100;
 }
 .cs1 img, .cs2 img {
   transition: .2s;
+  z-index: 100;
 }
 .cs1 img:hover, .cs2 img:hover {
   transform: scale(1.1);
   transition: .2s;
+  z-index: 100;
 }
 .cs1info, .cs2info {
   border-bottom: 1px solid #555;
+  z-index: 300;
 }
-.cs1info h3 {
+.cs1info h2 {
   color: #fd3600;
+  z-index: 300;
 }
-.cs2info h3 {
+.cs2info h2 {
   color: #1baa9b;
+  z-index: 300;
 }
 
 
 /* Art work */
 #section-2 {
-  padding: 7em 0;
-  background: white; /* #97d7b5; */
+  padding: 4em 0;
+  background: #dbdbdb; /* #97d7b5; */
 }
-#section-2 h2 {
+#section-2 h1 {
   color: #666;
 }
 
@@ -219,18 +232,17 @@ a:visited {
 .artbtn a{
   border: 1px solid #666;
   padding: 1em 3em;
-  color: #666;
+  color: black;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .artbtn a:hover{
-  background: #111;
-  color: #999;
+  color: white;
+  background: #a07f38;
 }
 
 #section-2 p {
-  transition: opacity 4s;
   padding: 4em 0;
 }
 
@@ -239,14 +251,27 @@ a:visited {
   padding: 5em 2em;
   background: white;
 }
+#section-3 p{
+  text-align: left;
+}
 
 /* Section 4 / BOXES CONTACT AND FAMILY*/
+#section-4 h2 {
+  padding-bottom: 0;
+}
+#section-4 p {
+  padding-top: .5em;
+  padding-bottom: 2em;
+}
+
 #section-4 .box {
   padding: 2em;
+  padding-top: 4em;
+  background: red;
 }
 
 #section-4 .box:first-child {
-  background: white;
+  background: #dbdbdb;
   color: #222222;
 }
 
@@ -256,7 +281,6 @@ a:visited {
 }
 
 .button {
-  background: white;
   color: #222222;
   border: 1px solid #555;
 }
@@ -266,7 +290,6 @@ a:visited {
 }
 
 .contactbtn a{
-  background: white;
   color: #222222;
   padding: 1em 3em;
   text-decoration: none;
@@ -274,27 +297,24 @@ a:visited {
 }
 
 .contactbtn a:hover{
-  background: #222;
+  background: #a07f38;;
   color: white;
 }
-
 .family {
   grid-template-columns: repeat(4, 1fr);
   display: grid;
-  grid-column-gap: 1em;
+  grid-column-gap: .5em;
+  padding-top: 1em;
 }
-
 .family img {
   width: 100%;
   border-radius: 50%;
 }
-
 .members {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column: span 4;
   padding-top: 1em;
-  grid-column-gap: .5em;
 }
 
 /* Footer */
@@ -369,9 +389,9 @@ a:visited {
 
   #section-1 {
     grid-template-rows: .5fr 1fr .5fr .5fr;
-    grid-gap: 1em;
+    grid-gap: 1.5em;
   }
-  #section-1 h2 {
+  #section-1 h1 {
     grid-column: 2/4;
     grid-row: 1/2;
   }
@@ -409,7 +429,7 @@ a:visited {
   }
 
   #section-1 p {
-    padding: .1em 1em;
+    padding: .1em 0;
     letter-spacing: -.03em;
   }
 
@@ -426,23 +446,26 @@ a:visited {
   }
 
   .sideNav {
+    grid-column: 1/2;
     position: fixed;
     top: -10000px;
     background: #222;
     width: 100%;
-    transition: height 1s;
+    transition: height .7s;
     z-index: 500;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 180px 180px 180px 180px;
+    justify-content: center;
   }
 
   .sideNav a {
     color: #999;
+    position: fixed;
     position: relative;
-    justify-content;
+    transition: .7s;
+    padding-top: 18px;
     z-index: 500;
     text-decoration: none;
-    transition: 1s;
     font-family: 'Anton', sans-serif;
   }
 
@@ -459,11 +482,6 @@ a:visited {
     padding: 1em 0 4em 0;
   }
 
-  #section-3 .content-text {
-    columns: 2;
-    column-gap: 3em;
-    text-align: left;
-  }
   #section-3 .content-text p {
     padding-top: 0;
   }
@@ -472,16 +490,15 @@ a:visited {
     grid-column: 2/4;
   }
 
-  #section-4 {
-    padding-top: 2em;
+  #section-4 h2 {
+    padding-bottom: 0;
   }
-
   #section-4 div {
     padding: .5em;
   }
-
-  #section-4, #section-4 p {
-    padding-bottom: 2em;
+  #section-4 p {
+    padding-bottom: 3em;
+    padding-top: 0;
   }
 
   #footer div, .box {
@@ -517,7 +534,14 @@ a:visited {
   }
 
   #section-2 p {
-    padding: 3em 1em;
+    width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+
+  #section-3 p {
+    width: 600px;
+    margin: auto;
   }
 }
 
@@ -542,6 +566,7 @@ a:visited {
     grid-template-columns: 190px 190px 190px;
     justify-content: center;
     top: -200px;
+    height: 50px;
   }
 
   .header_wrap .one {
@@ -556,11 +581,12 @@ a:visited {
 
   #section-1 {
     padding: 5em 0;
-    grid-gap: 2.5em;
+    grid-column-gap: .1em;
+    grid-row-gap: 3.5em;
     grid-template-rows: 1fr 4fr 4fr 1fr;
   }
 
-  #section-1 h2 {
+  #section-1 h1 {
     grid-column: 2/4;
   }
 
@@ -579,14 +605,29 @@ a:visited {
     padding-right: 5em;
     border-bottom: 0px solid white;
   }
+  .cs1info h2 {
+    grid-column: 3/4;
+    border-top: 3px solid #fd3600;
+    text-align: left;
+  }
   .cs2info {
     grid-column: 2/3;
     padding-top: 2.5em;
     padding-left: 5em;
     border-bottom: 0px solid white;
   }
-  .cs1info p, .cs2info p {
+  .cs2info h2{
+    grid-column: 2/3;
+    border-top: 3px solid #1baa9b;
+    text-align: right;
+  }
+  .cs1info p{
     text-align: left;
+    z-index: 300;
+  }
+  .cs2info p {
+    text-align: right;
+    z-index: 300;
   }
 
   #section-4 p {
@@ -602,14 +643,6 @@ a:visited {
 
   .header_wrap {
     top: -200px;
-  }
-
-  .family {
-    grid-column-gap: 5em;
-  }
-
-  .members {
-    grid-column-gap: 5.2em;
   }
 
 }
@@ -630,11 +663,11 @@ a:visited {
   }
 
   .family {
-    grid-column-gap: 7em;
+    grid-column-gap: 3em;
   }
 
   .members {
-    grid-column-gap: 7.2em;
+    grid-column-gap: 3em;
   }
 
 }
