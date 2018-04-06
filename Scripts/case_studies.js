@@ -50,7 +50,7 @@ $(document).ready(function(){
         $('.sideNav').css('top', '0px');
         $('div.sideNav > a').css('top', '0px');
         $('div.sideNav > a').css('margin', '20px');
-        $('div.sideNav > a').animate({height: '60px'},10);
+        $('div.sideNav > a').animate({height: '70px'},10);
         $('div.sideNav > a').animate({opacity: '1'},10);
       }
 

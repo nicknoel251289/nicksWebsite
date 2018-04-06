@@ -46,7 +46,8 @@ a:visited {
   width: 100%;
   z-index: 500;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 180px 180px 180px 180px;
+  justify-content: center;
   font-family: 'Anton', sans-serif;
 }
 
@@ -168,6 +169,35 @@ a:visited {
   #section-1 p {
     padding: .1em 1em;
     letter-spacing: -.03em;
+  }
+
+  .sideNav {
+    grid-column: 1/2;
+    position: fixed;
+    top: -10000px;
+    background: #222;
+    width: 100%;
+    transition: height .7s;
+    z-index: 500;
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px;
+    justify-content: center;
+  }
+
+  .sideNav a {
+    color: #999;
+    position: fixed;
+    position: relative;
+    transition: .7s;
+    padding-top: 18px;
+    z-index: 500;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+  }
+
+  .sideNav a:visited{
+    color: #999;
+    z-index: 500;
   }
 
   .card:hover {
