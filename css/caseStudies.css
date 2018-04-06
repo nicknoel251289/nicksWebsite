@@ -17,6 +17,7 @@ img {
   width: 100%; /* of it's container. ATM which is the div tag w/id of card*/
   height: auto;
   border-radius: 5px;
+  transition: .3s;
 }
 
 h1, h4 {
@@ -80,6 +81,7 @@ a:visited {
 }
 .cs1 img:hover, .cs2 img:hover {
   transform: scale(1.08);
+  transition: .3s;
 }
 .cs1info, .cs2info {
   border-bottom: 1px solid #555;
