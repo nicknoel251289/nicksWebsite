@@ -32,7 +32,7 @@ $(document).ready(function(){
       */
 
       if (lastPosition > position && lastPosition > sideNavPositionY) {
-        $('.sideNav').animate({height: '70px'},10);
+        $('.sideNav').animate({height: '60px'},10);
         $('.sideNav').css('top', '0px');
         $('div.sideNav > a').css('top', '0px');
         //$('div.sideNav > a').css('margin', '20px');

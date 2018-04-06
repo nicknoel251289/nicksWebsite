@@ -51,7 +51,7 @@ a:visited {
   width: 100%;
   z-index: 500;
   display: grid;
-  grid-template-columns: 180px 180px 180px 180px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   font-family: 'Anton', sans-serif;
 }
@@ -190,4 +190,12 @@ input, textarea {
 #footer a {
   text-decoration: none;
   color: #e29207;
+}
+
+@media(min-width: 730px) {
+
+  .nav {
+    grid-template-columns: 180px 180px 180px 180px;
+  }
+  
 }
