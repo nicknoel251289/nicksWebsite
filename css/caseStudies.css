@@ -139,6 +139,10 @@ a:visited {
     padding: 0;
     border-bottom: 0px solid white;
   }
+
+  #footer div, .box {
+    grid-column: span 2;
+  }
 }
 
 @media(min-width: 730px) {

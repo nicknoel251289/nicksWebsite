@@ -10,7 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   background: white;
   color: #6d6d6d;
-  font-size: 1em;
+  font-size: .9em;
   line-height: 1.5;
   text-align: center;
   overflow-x: hidden;
@@ -41,6 +41,36 @@ a,
 a:hover,
 a:visited {
   color: white;
+}
+
+.nav {
+  position: fixed;
+  background: #222;
+  width: 100%;
+  z-index: 500;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  font-family: 'Anton', sans-serif;
+}
+
+.nav a {
+  color: #999;
+  position: relative;
+  justify-content;
+  z-index: 500;
+  text-decoration: none;
+  padding: 1.5em 0;
+}
+
+.nav a:hover {
+  background: white;
+  color: #999;
+}
+
+.nav a:visited{
+  color: #999;
+  z-index: 500;
 }
 
 .introgold {
@@ -448,10 +478,10 @@ a:visited {
   .sideNav {
     grid-column: 1/2;
     position: fixed;
-    top: -10000px;
+    top: -100px;
     background: #222;
     width: 100%;
-    transition: height .7s;
+    transition: height .4s;
     z-index: 500;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -460,10 +490,9 @@ a:visited {
 
   .sideNav a {
     color: #999;
-    position: fixed;
     position: relative;
-    transition: .7s;
-    padding-top: 18px;
+    transition: .4s;
+    padding-top: 20px;
     z-index: 500;
     text-decoration: none;
     font-family: 'Anton', sans-serif;
@@ -471,6 +500,10 @@ a:visited {
   .sideNav a:visited{
     color: #999;
     z-index: 500;
+  }
+  .sideNav a:hover {
+    background: white;
+    color: #222;
   }
 
   #section-3 {
@@ -506,6 +539,10 @@ a:visited {
 }
 
 @media(min-width: 730px) {
+
+  .nav {
+    grid-template-columns: 180px 180px 180px 180px;
+  }
 
   .sideNav {
     grid-template-columns: 180px 180px 180px 180px;

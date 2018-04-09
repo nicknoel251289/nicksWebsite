@@ -17,43 +17,43 @@ $(document).ready(function(){
 
       if (position > artPositionY) {
         $('.art-grid').css('opacity', '1');
-      }
-      if (position < artPositionY) {
+      }else if (position < artPositionY) {
         $('.art-grid').css('opacity', '0');
       }
 
       var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top + 100;
-
-      /*
-      console.log("My last position is " + lastPosition);
-      console.log("My new position is " + position);
-      console.log("My sideNavPositionY is " + sideNavPositionY);
-      */
-
-      if (lastPosition > position && lastPosition > sideNavPositionY) {
+      var sideNavPositionY = sideNavPosition.top;
+      if (lastPosition > position) {
         $('.sideNav').animate({height: '60px'},10);
         $('.sideNav').css('top', '0px');
+        //$('div.sideNav > a').css('top', '18px');
         $('div.sideNav > a').css('top', '0px');
-        //$('div.sideNav > a').css('margin', '20px');
-        //$('div.sideNav > a').animate({height: '60px'},10);
+        $('div.sideNav > a').animate({height: '44px'},10);
         $('div.sideNav > a').animate({opacity: '1'},10);
-      } else if (lastPosition < position){
-        //$('.sideNav').css('height', '0px');
-        $('.sideNav').animate({height: '0px'},10);
-        $('sideNav').css('top', '-100px');
-        $('div.sideNav > a').css('top', '-100px');
-        $('div.sideNav > a').animate({height: '0px'},10);
-      } else if (position < sideNavPositionY){
-        //$('.sideNav').css('height', '0px');
+      } else if (lastPosition < position  && lastPosition > sideNavPositionY){
         $('.sideNav').animate({height: '0px'},10);
         $('sideNav').css('top', '-100px');
         $('div.sideNav > a').css('top', '-100px');
         $('div.sideNav > a').animate({height: '0px'},10);
       }
+      /*else if (position < sideNavPositionY){
+        $('.sideNav').animate({height: '0px'},10);
+        $('sideNav').css('top', '-100px');
+        $('div.sideNav > a').css('top', '-100px');
+        $('div.sideNav > a').animate({height: '0px'},10);
+      }*/
 
       lastPosition = position;
 
+      var sectionOne = $('#section-1').position();
+      noNav = sectionOne.top;
+
+    /*  if (position > noNav){
+        $('.nav').css('opacity', '0');
+      } else if (position < noNav){
+        $('.nav').css('opacity', '1');
+      }
+      console.log("noNav position is " + noNav); */
 
   });
 

@@ -75,6 +75,7 @@ a:visited {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   font-family: 'Anton', sans-serif;
+  position: fixed;
 }
 .nav a {
   color: #999;
