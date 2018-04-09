@@ -48,11 +48,15 @@ $(document).ready(function(){
       var sectionOne = $('#section-1').position();
       noNav = sectionOne.top;
 
-    if (position > noNav){
-        $('.nav').css('display', 'none');
-      }
+      if (position > noNav){
+          $('.nav').css('display', 'none');
+        } /*else if (position < noNav){
+          $('.nav').css('display', 'grid');
+        }*/
 
   });
+
+
 
   $(window).resize(function(){
     var windowWidth = $(this).innerWidth();
@@ -61,6 +65,16 @@ $(document).ready(function(){
       $('.sideNav').css('display', 'none');
     } else if (windowWidth > 750) {
       $('.sideNav').css('display', 'grid');
+    }
+  });
+
+  $(window).resize(function(){
+    var windowWidth = $(this).innerWidth();
+    console.log(windowWidth);
+    if (windowWidth < 750) {
+      $('.nav').css('display', 'none');
+    } else if (windowWidth > 750) {
+      $('.nav').css('display', 'grid');
     }
   });
 
@@ -109,6 +123,11 @@ $(document).ready(function(){
       $('.sideNav').css('display', 'none');
     } else if (windowWidth > 811){
       $('.sideNav').css('display', 'block');
+    }
+    if(windowInnerWidth < 811){
+      $('.nav').css('display', 'none');
+    } else if (windowWidth > 811){
+      $('.nav').css('display', 'block');
     }
 
 
