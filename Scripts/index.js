@@ -24,7 +24,7 @@ $(document).ready(function(){
       var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
       var sideNavPositionY = sideNavPosition.top;
       if (lastPosition > position) {
-        $('.sideNav').animate({height: '60px'},10);
+        $('.sideNav').animate({height: '64px'},10);
         $('.sideNav').css('top', '0px');
         //$('div.sideNav > a').css('top', '18px');
         $('div.sideNav > a').css('top', '0px');
@@ -48,12 +48,9 @@ $(document).ready(function(){
       var sectionOne = $('#section-1').position();
       noNav = sectionOne.top;
 
-    /*  if (position > noNav){
-        $('.nav').css('opacity', '0');
-      } else if (position < noNav){
-        $('.nav').css('opacity', '1');
+    if (position > noNav){
+        $('.nav').css('display', 'none');
       }
-      console.log("noNav position is " + noNav); */
 
   });
 
