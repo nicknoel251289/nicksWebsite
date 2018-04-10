@@ -74,7 +74,7 @@ a:visited {
 }
 
 .introgold {
-  color: #a07f38;
+  color: #3f89ff;
 }
 
 .btn-outline {
@@ -86,7 +86,7 @@ a:visited {
 }
 .btn-outline:hover {
   color: white;
-  background: #a07f38;
+  background: #3f89ff;
 }
 .btn-outline a:hover {
   color: white;
@@ -192,7 +192,7 @@ a:visited {
 }
 .csbtn a:hover{
   color: white;
-  background: #a07f38;
+  background: #3f89ff;
 }
 
 .cs1, .cs2 {
@@ -269,7 +269,7 @@ a:visited {
 
 .artbtn a:hover{
   color: white;
-  background: #a07f38;
+  background: #3f89ff;
 }
 
 #section-2 p {
@@ -327,7 +327,7 @@ a:visited {
 }
 
 .contactbtn a:hover{
-  background: #a07f38;;
+  background: #3f89ff;
   color: white;
 }
 .family {
@@ -357,7 +357,7 @@ a:visited {
 
 #footer a {
   text-decoration: none;
-  color: #e29207;
+  color: #3f89ff;
 }
 
 /* MEDIA QUERY */
