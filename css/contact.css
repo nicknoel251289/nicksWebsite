@@ -249,12 +249,11 @@ i {
   background: #222222;
   color: #bfbfbf;
   text-align: center;
-  grid-template-columns: 1fr 1fr;
 }
 
 #footer a {
   text-decoration: none;
-  color: #e29207;
+  color: #3f89ff;
 }
 
 @media(min-width: 730px) {
@@ -285,7 +284,11 @@ i {
     grid-template-rows: .5fr .5fr .5fr 2fr 3.5fr;
   }
   .medias {
-    padding-top: 4em;
+    padding-top: 2em;
+  }
+
+  #footer {
+    grid-template-columns: 1fr 1fr;
   }
 
 }
