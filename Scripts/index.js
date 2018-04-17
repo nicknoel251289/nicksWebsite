@@ -56,7 +56,11 @@ $(document).ready(function(){
 
   });
 
-
+  $(document).ready(function(){
+    $('.menu').click(function(){
+        $('ul').toggleClass('active');
+    })
+  })
 
   $(window).resize(function(){
     var windowWidth = $(this).innerWidth();
