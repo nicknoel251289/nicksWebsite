@@ -24,18 +24,19 @@ $(document).ready(function(){
       var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
       var sideNavPositionY = sideNavPosition.top;
       if (lastPosition > position) {
-        $('.sideNav').animate({height: '64px'},10);
-        $('.sideNav').css('top', '0px');
-        //$('div.sideNav > a').css('top', '18px');
-        $('div.sideNav > a').css('top', '0px');
-        $('div.sideNav > a').animate({height: '44px'},10);
-        $('div.sideNav > a').animate({opacity: '1'},10);
-      } else if (lastPosition < position  && lastPosition > sideNavPositionY){
-        $('.sideNav').animate({height: '0px'},10);
-        $('sideNav').css('top', '-100px');
-        $('div.sideNav > a').css('top', '-100px');
-        $('div.sideNav > a').animate({height: '0px'},10);
+        $('nav').animate({height: '71px'},10);
+        $('nav').css('top', '0px');
+        $('nav > a').css('top', '0px');
+        $('nav > a').animate({height: '44px'},10);
+        $('nav > a').animate({opacity: '1'},10);
+        $('nav > ul > li > a').animate({opacity: '1'},10);
+      } else if (lastPosition < position && lastPosition > sideNavPositionY){
+        $('nav').animate({height: '0px'},10);
+        $('nav').css('top', '-100px');
+        $('nav > a').css('top', '-100px');
+        $('nav > a').animate({height: '0px'},10);
       }
+
       /*else if (position < sideNavPositionY){
         $('.sideNav').animate({height: '0px'},10);
         $('sideNav').css('top', '-100px');
@@ -56,11 +57,20 @@ $(document).ready(function(){
 
   });
 
-  $(document).ready(function(){
     $('.menu').click(function(){
         $('ul').toggleClass('active');
-    })
-  })
+    });
+
+    /* var positionBefore = 0;
+    var newPosition = $(this).scrollTop();
+    if(position > positionBefore){
+      $('ul').css('display', 'none');
+    }
+    console.log(newPosition);
+    console.log(positionBefore);
+    positionBefore = newPosition;*/
+
+
 
   $(window).resize(function(){
     var windowWidth = $(this).innerWidth();
@@ -69,16 +79,6 @@ $(document).ready(function(){
       $('.sideNav').css('display', 'none');
     } else if (windowWidth > 750) {
       $('.sideNav').css('display', 'grid');
-    }
-  });
-
-  $(window).resize(function(){
-    var windowWidth = $(this).innerWidth();
-    console.log(windowWidth);
-    if (windowWidth < 750) {
-      $('.nav').css('display', 'none');
-    } else if (windowWidth > 750) {
-      $('.nav').css('display', 'grid');
     }
   });
 
@@ -99,38 +99,18 @@ $(document).ready(function(){
     }
   });
 
-  //side nav bar buttons
-  $(".btn2").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // Store hash
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }
-  });
-
   /////////////////////////////////////////
   // Turn of sideNav when resizing window//
   /////////////////////////////////////////
 
-  var windowInnerWidth = $(this).innerWidth();
-
     if(windowInnerWidth < 811){
       $('.sideNav').css('display', 'none');
-    } else if (windowWidth > 811){
+    } else if (windowInnerWidth > 811){
       $('.sideNav').css('display', 'block');
     }
     if(windowInnerWidth < 811){
       $('.nav').css('display', 'none');
-    } else if (windowWidth > 811){
+    } else if (windowInnerWidth > 811){
       $('.nav').css('display', 'block');
     }
 

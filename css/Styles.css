@@ -18,18 +18,19 @@ body {
   font-family: 'Anton', sans-serif;*/
 }
 h1 {
-  font-family: 'Raleway', sans-serif;
-  color: #3f89ff;
+  font-family: 'Anton', sans-serif;
+  color: #00316b;
   margin: 0;
-  font-size: 1.8em;
+  font-size: 2em;
+  letter-spacing: 3px;
+  font-weight: 400;
 }
 h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 2px;
-  color: #3f89ff;
+  font-family: 'Anton', sans-serif;
+  color: #00316b;
   margin: 0;
+  letter-spacing: 3px;
 }
-
 img {
   display: block; /* This displays it across the width of the whole screen*/
   width: 100%; /* of it's container. ATM which is the div tag w/id of card*/
@@ -61,14 +62,15 @@ a:visited {
   font-weight: 600;
 }
 .see-more-button a:hover{
-  background: #3f89ff;
+  background: #006ba3;
 }
 
 nav {
   width: 100%;
-  background: #3f89ff;
+  background: #00316b;
   position: fixed;
   z-index: 1000;
+  transition: .4s;
 }
 ul {
   margin: 0 auto;
@@ -82,6 +84,7 @@ ul li {
   text-align: center;
   height: 71px;
   line-height: 71px;
+  background: #00316b;
   }
 ul li a {
   text-decoration: none;
@@ -90,32 +93,40 @@ ul li a {
   padding: 30px 20px;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
+  letter-spacing: 0;
 }
 ul li:hover {
-  background: #00316b;
+  background: #006ba3;
   /*background: #e91e63;*/
 }
 .toggle {
   display: block;
   width: 100%;
-  padding: 14px 20px;
-  background: #3f89ff;
+  padding: 16px 20px;
+  background: #00316b;
   text-align: right;
   box-sizing: border-box;
   color: #fff;
   font-size: 1.5em;
+  transition: .4s;
+}
+.fa-bars {
 }
 .fa-bars:hover {
-  color: #00316b;
+  color: #006ba3;
 }
 .active {
   display: block;
+}
+.notActive {
+  display: none;
 }
 
 /*BACKGROUND IMAGING FOR MOBILE AND DESKTOP*/
 .mobileimgcenter {
   display: grid;
   grid-template-columns: 1fr 260px 1fr;
+  background: #2a9fdc;
 }
 .mobileimg {
   grid-column: 2/3;
@@ -132,6 +143,7 @@ ul li:hover {
   margin: 0;
   text-align: center;
   height: 640px;
+  background: #2a9fdc;
 }
 
 /*INTODUCTION MAIN PAGE*/
@@ -176,13 +188,16 @@ ul li:hover {
   font-weight: 600;
 }
 .btn-outline a:hover{
-  background: #3f89ff;
+  background: #006ba3;
 }
 
 /* Case Studies */
 #section-1 {
   background: white;
   padding: 0 2em 4em 2em;
+}
+#section-1 h1 {
+  padding-top: 2em;
 }
 .cs1, .cs2 {
   padding-top: 3em;
@@ -218,7 +233,7 @@ ul li:hover {
 /* Art work */
 #section-2 {
   padding: 4em 2em;
-  background: #3367ba; /* #97d7b5; */
+  background: #2a9fdc; /* #97d7b5; */
 }
 #section-2 h1 {
   color: white;
@@ -267,10 +282,10 @@ ul li:hover {
   text-align: center;
 }
 #section-4 h1 {
-  padding-bottom: 1.8em;
+  padding-bottom: .5em;
 }
 #section-4 p {
-  padding-top: .5em;
+  padding-bottom: 2em;
 }
 #section-4 .see-more-button {
   padding: 4em 0;
@@ -281,25 +296,9 @@ ul li:hover {
 }
 #section-4 .box:last-child {
   background: #222222;
-  color: #bfbfbf;
+  color: white;
 }
-
-.button {
-  color: #222222;
-  border: 1px solid #555;
-}
-
-.contactbtn {
-  padding: 2em;
-}
-.contactbtn a{
-  color: #222222;
-  padding: 1em 3em;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.contactbtn a:hover{
-  background: #3f89ff;
+.myFamily {
   color: white;
 }
 
@@ -323,13 +322,13 @@ ul li:hover {
 /* Footer */
 #footer {
   padding: 2em;
-  background: #3f89ff;
+  background: #006ba3;
   color: #bfbfbf;
   text-align: center;
 }
 #footer a {
   text-decoration: none;
-  color: white;
+  color: #00316b;
 }
 
 /* MEDIA QUERY */
@@ -337,6 +336,7 @@ ul li:hover {
 
   #header {
     height: 1080px;
+    background: none;
   }
   .desktopimg {
     height: 120%;
@@ -415,8 +415,15 @@ ul li:hover {
     padding-top: 0;
   }
 
-  #footer div, .box {
-    grid-column: span 2;
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #footer div {
+    font-size: .9em;
+  }
+  #footer div:first-child {
+    grid-column: 1/2;
   }
 }
 
@@ -433,6 +440,7 @@ ul li:hover {
   }
   ul li {
     display: inline-block;
+    background: none;
   }
   .toggle {
     display: none;
@@ -586,12 +594,6 @@ ul li:hover {
   }
   #section-4 .see-more-button {
     padding: 0;
-  }
-  .box:first-child {
-    grid-column: 1/2;
-  }
-  .box:last-child {
-    grid-column: 2/3;
   }
 }
 

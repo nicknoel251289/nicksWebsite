@@ -24,8 +24,9 @@
     <!-- JS links -->
     <script src="Scripts/case_studies.js"></script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300|Poiret+One|Quicksand|Rajdhani" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"> <!-- Anton Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amaranth:700|Anton|Bevan|Changa+One|Nunito:300|Passion+One|Pontano+Sans|Raleway:800|Roboto:700|Roboto:300|Titillium+Web:300" rel="stylesheet">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115488770-1"></script>
     <script>
@@ -41,19 +42,18 @@
   <body>
       <main class="main">
 
-        <!--<div class="sideNav">
-          <a href="index.html" class="btn2">Home</a>
-          <a href="caseStudies.html" class="btn2">Case Studies</a>
-          <a href="art.html" class="btn2">Art Work</a>
-          <a href="contact.html" class="btn2">Contact</a>
-        </div>-->
-
-        <div class="nav">
-          <a href="index.html" class="btn2">Home</a>
-          <a href="caseStudies.html" class="btn2">Case Studies</a>
-          <a href="art.html" class="btn2">Art Work</a>
-          <a href="contact.html" class="btn2">Contact</a>
-        </div>
+        <nav>
+          <div class="toggle">
+            <div class="menu"><i class="fas fa-bars"></i></div>
+          </div>
+          <ul><!--TRY MAKING THIS A DIV NAV BAR USING GRID-->
+            <li><a href="#header" class="btn">Home</a></li>
+            <li><a href="caseStudies.html">Case Studies</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
 
         <section id="section-0">
 
@@ -96,12 +96,12 @@
           <div class="section-2b">
             <h2>OBJECTIVE</h2>
             <p>The primary goals of the project were:</p>
-            <ul>
+            <div class="objective-list">
               <li>Design a landing page for a mobile fitness application</li>
               <li>Create a palette that is energetic and professional</li>
               <li>Demonstrate some of the applications features</li>
               <li>Give data on how this application is beneficial</li>
-            </ul>
+            </div>
           </div>
         </section>
 
