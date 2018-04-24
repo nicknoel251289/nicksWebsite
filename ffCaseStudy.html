@@ -42,12 +42,12 @@
   <body>
       <main class="main">
 
-        <nav>
+        <nav class="navbar">
           <div class="toggle">
             <div class="menu"><i class="fas fa-bars"></i></div>
           </div>
-          <ul><!--TRY MAKING THIS A DIV NAV BAR USING GRID-->
-            <li><a href="#header" class="btn">Home</a></li>
+          <ul class="nav-ul"><!--TRY MAKING THIS A DIV NAV BAR USING GRID-->
+            <li><a href="index.html" class="btn">Home</a></li>
             <li><a href="caseStudies.html">Case Studies</a></li>
             <li><a href="art.html">Art</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -85,7 +85,7 @@
           </p>
         </section>
 
-        <section id="section-2" class="section-2grid grid">
+        <section id="section-2" class="section-2grid">
           <div class="section-2a">
             <h2>MY ROLE</h2>
             <p>
@@ -96,63 +96,112 @@
           <div class="section-2b">
             <h2>OBJECTIVE</h2>
             <p>The primary goals of the project were:</p>
-            <div class="objective-list">
+            <ul class="objective-list">
               <li>Design a landing page for a mobile fitness application</li>
               <li>Create a palette that is energetic and professional</li>
               <li>Demonstrate some of the applications features</li>
               <li>Give data on how this application is beneficial</li>
-            </div>
+            </ul>
           </div>
         </section>
 
         <section id="section-3" class="grid">
           <h2>THE RESEARCH</h2>
 
-          <div class="researchgrid">
-            <a class="rp1" href="Pictures/FitForm_Demographic_Research.png" data-fancybox="group" data-caption="Demographic Research">
-              <img src="Pictures/FitForm_Demographic_Research.png" alt="Demographic Research">
-            </a>
-            <a class="rp2" href="Pictures/fitform_squat_research2.png" data-fancybox="group" data-caption="Preference Test">
-              <img src="Pictures/fitform_squat_research2.png" alt="Preference Test">
-            </a>
-            <a class="rp3" href="Pictures/ffsquatstats.png" data-fancybox="group" data-caption="Preference Test">
-              <img src="Pictures/ffsquatstats.png" alt="Preference Test">they knew proper body mechanics and performed the exercise incorrectly.
-            </a>
-            <a class="rp4" href="Pictures/ffsquatstats2.png" data-fancybox="group" data-caption="Preference Test">
-              <img src="Pictures/ffsquatstats2.png" alt="Preference Test">they did not know proper body mechanics and performed the exercise incorrectly.
-            </a>
-          </div>
+          <div class="research-data">
+            <p>
+              <div>What I wanted to gain with these surveys is an age demographic, to learn what people’s point of views and understanding are of what exercise and body mechanics is.</div>
+            </br>
+              <b>Statistics for the group A - people who said they knew proper body mechanics for squatting</b>
+              <ul>
+                <li>This group consisted of 65% of respondents</li>
+                <li>Out of the 65% that said they did, 61% failed to perform the squat correctly</li>
+                <li>Of the 61% of who failed, 76% were between the age of 18 and 34</li>
+              </ul>
 
-          <p>
-            After examining results from user surveys, it’s highly suggestive that a large number of people doing
-            free weight exercises are unsure if they use proper motor mechanics to perform exercises. The conclusion is further
-            ensured by emperical data used in the initial research. A functional screening to determine exercise
-            mastery was done to demonstrate if users were knowledgeable of proper motor mechanics during common lifts. The high barbell back squat, a
-            commong exercise inside and outside the gym, was used as the benchmark. The results were relatively shocking with over 50% of participants
-            performing the exercise incorrectly. The surveys, as well as my own experiences, were instrumental in determining what features would be
-            implemented into the application and website.
-          </p>
+              <b>Statistics for the group B - people who said they did NOT know proper body mechanics for squatting</b>
+              <ul>
+                <li>This group consisted of 35% of the respondents</li>
+                <li>Out of the 35% that did not know, 71% failed to perform the squat correctly</li>
+                <li>Of the 71% who failed, 28% were between the ages of 18 and 24</li>
+              </ul>
+
+              <b>An additional survey showed:</b>
+              <ul>
+                <li>About 60% of people used free weights</li>
+                <li>74% said they have never worked with a trainer</li>
+                <li>75% of free weight users fell within the 18-34 years of age demographic</li>
+                <li>75% of people who marked they had been injured in the gym fell between the ages of 18 and 34.</li>
+              </ul>
+
+              The functional screening to determine exercise mastery was done to demonstrate if users were knowledgeable of proper motor mechanics during common
+              lifts. The high barbell back squat, a common exercise inside and outside the gym, was used as the benchmark. The results were relatively shocking
+              with over 65% of participants performing the exercise incorrectly. As a result, it’s fair to say that most  people have a false sense of understanding
+              of body mechanics during the squatting exercise. Chances are this pattern follows continually into other multi-joint/compound exercises. The surveys,
+              as well as my own experiences, were instrumental in determining what features would be implemented into the application and featured on the website.
+            </p>
+          </div>
 
         </section>
 
         <section id="section-4" class="grid">
-          <h2>PERSONAS</h2>
+          <h2 class="personas-main-header">PERSONAS</h2>
 
-          <p>
+          <p class="personas-main-paragraph">
             The personas created were designed to depict various people with various fitness levels. FitForm will be available for everyone, so it was important that no
             matter what their knowledge is, there would be something for them and it would be easy to use.
           </p>
 
-          <div class="personaPic">
-            <a class="personaPic1" href="Pictures/Sharon_Persona.png" data-fancybox="group" data-caption="Sharon Persona">
-              <img src="Pictures/Sharon_Persona.png" alt="Sharon Persona">
-            </a>
-            <a class="personaPic2" href="Pictures/Kate_Persona.png" data-fancybox="group" data-caption="Kate Persona">
-              <img src="Pictures/Kate_Persona.png" alt="Kate Persona">
-            </a>
-            <a class="personaPic3" href="Pictures/Jan_Persona.png" data-fancybox="group" data-caption="Jan Persona">
-              <img src="Pictures/Jan_Persona.png" alt="Jan Persona">
-            </a>
+          <div class="persona-container">
+            <div class="persona-title"><span class="persona-name">SHARON</span></div>
+            <div class="persona-body">
+              <div class="left-side-info">
+                <h4>Basic Info</h4>
+                <div class="persona-basic-info">
+                  <li><b>Age:</b> 62</li>
+                  <li><b>Occupation:</b> Travel Counselor</li>
+                  <li><b>Location:</b> Burlington, VT</li>
+                  <li><b>Gender:</b> Female</li>
+                  <li><b>Tier:</b> Casual</li>
+                </div>
+                <div class="persona-img">
+                  <img src="Pictures/Sharon.jpg" alt="Sharon">
+                  <div class="persona-quote"> We are what we repeatedly do.</div>
+                </div>
+              </div>
+              <div class="right-side-info">
+                <div class="persona-info">
+                  <div class="persona-motivations">
+                    <h4>Motivations</h4>
+                    <p>
+                    Sharon has been off and on at the gym years. Like a lot of people, having a trainer is expensive and you make sure sure you are getting what you pay for.
+                    More importantly you want to know that the trainer knows what they are doing. Sharon has had a past negative experience with a trainer ultimately resulting
+                    in a knee injury. With FitForm, it offers Sharon the experience of accuracy, knowledge, feedback and more, which is something Sharon was unable to receive
+                    through a trainer. The application also allows her to save up to 90% of what she was paying for a trainer.
+                    </p>
+                  </div>
+                  <div class="goals-left">
+                    <h4>Goals</h4>
+                    <li>Easy, Simple, Centralized</li>
+                    <li>Not too complicated</li>
+                    <li>Can get suggested exercises</li>
+                  </div>
+                  <div class="frustrations-right">
+                    <h4>Frustrations</h4>
+                    <li>Would like to have a built in workout</li>
+                    <li>Ask questions with hasty responses</li>
+                  </div>
+                  <div class="persona-bio">
+                    <h4>Bio</h4>
+                    <p>
+                    Sharon is a travel counselor who handles corporate business accounts and their traveling needs. She is a great aunt to a beautiful nephew. Sharon also spends
+                    a lot of time traveling around the world herself using her American Airlines discount after retiring from their Connecticut branch. She enjoys being able to
+                    workout at home, whether in the pool or inside with her free weights.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -205,8 +254,8 @@
         </section>
 
         <section id="section-8" class="nextlast">
-          <a href="pbnCaseStudy.html"><div class="last">Last Case Study</div></a>
-          <a href="pbnCaseStudy.html"><div class="next">Next Case Study</div></a>
+          <a class="last" href="pbnCaseStudy.html"><div>Last Case Study</div></a>
+          <a class="next" href="pbnCaseStudy.html"><div>Next Case Study</div></a>
         </section>
 
       </main>

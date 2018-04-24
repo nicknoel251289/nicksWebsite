@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  var lastPosition = 0;
+
   $(document).scroll(function() {
       var position = $(this).scrollTop();
       var caseStudy = $('#section-1').position();
@@ -20,7 +22,7 @@ $(document).ready(function(){
       }
 
       var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top;
+      var sideNavPositionY = sideNavPosition.top - 81;
       if (lastPosition > position) {
         $('nav').animate({height: '71px'},10);
         $('nav').css('top', '0px');
@@ -44,12 +46,31 @@ $(document).ready(function(){
 
       lastPosition = position;
 
+      var sectionOne = $('#section-1').position();
+      noNav = sectionOne.top;
+
+      if (position > noNav){
+          $('.nav').css('display', 'none');
+        } /*else if (position < noNav){
+          $('.nav').css('display', 'grid');
+        }*/
 
   });
 
-  $('.menu').click(function(){
-      $('ul').toggleClass('active');
-  });
+    $('.menu').click(function(){
+        $('ul').toggleClass('active');
+    });
+
+    /* var positionBefore = 0;
+    var newPosition = $(this).scrollTop();
+    if(position > positionBefore){
+      $('ul').css('display', 'none');
+    }
+    console.log(newPosition);
+    console.log(positionBefore);
+    positionBefore = newPosition;*/
+
+
 
   $(window).resize(function(){
     var windowWidth = $(this).innerWidth();
@@ -78,33 +99,20 @@ $(document).ready(function(){
     }
   });
 
-  //side nav bar buttons
-  $(".btn2").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // Store hash
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }
-  });
-
   /////////////////////////////////////////
   // Turn of sideNav when resizing window//
   /////////////////////////////////////////
-  var windowInnerWidth = $(this).innerWidth();
 
     if(windowInnerWidth < 811){
       $('.sideNav').css('display', 'none');
-    } else if (windowWidth > 811){
+    } else if (windowInnerWidth > 811){
       $('.sideNav').css('display', 'block');
     }
+    if(windowInnerWidth < 811){
+      $('.nav').css('display', 'none');
+    } else if (windowInnerWidth > 811){
+      $('.nav').css('display', 'block');
+    }
+
 
 });
