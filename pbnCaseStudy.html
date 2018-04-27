@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nick Noel Website</title>
+    <title>PbNation Case Study</title>
     <!-- CSS links -->
     <link rel="stylesheet" href="css/pbnCaseStudy.css">
     <link rel="stylesheet" href="css/Fancybox.css">
@@ -24,8 +24,9 @@
     <!-- JS links -->
     <script src="Scripts/case_studies.js"></script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300|Poiret+One|Quicksand|Rajdhani" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"> <!-- Anton Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amaranth:700|Anton|Bevan|Changa+One|Nunito:300|Passion+One|Pontano+Sans|Raleway:800|Roboto:700|Roboto:300|Titillium+Web:300" rel="stylesheet">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115488770-1"></script>
     <script>
@@ -43,21 +44,21 @@
     <header>
     </header>
 
-      <main class="main">
+    <body>
+        <main class="main">
 
-        <!--<div class="sideNav">
-          <a href="index.html" class="btn2">Home</a>
-          <a href="caseStudies.html" class="btn2">Case Studies</a>
-          <a href="art.html" class="btn2">Art Work</a>
-          <a href="contact.html" class="btn2">Contact</a>
-        </div>-->
-
-        <div class="nav">
-          <a href="index.html" class="btn2">Home</a>
-          <a href="caseStudies.html" class="btn2">Case Studies</a>
-          <a href="art.html" class="btn2">Art Work</a>
-          <a href="contact.html" class="btn2">Contact</a>
-        </div>
+          <nav class="navbar">
+            <div class="toggle">
+              <div class="menu"><i class="fas fa-bars"></i></div>
+            </div>
+            <ul class="nav-ul"><!--TRY MAKING THIS A DIV NAV BAR USING GRID-->
+              <li><a href="index.html" class="btn">Home</a></li>
+              <li><a href="caseStudies.html">Case Studies</a></li>
+              <li><a href="art.html">Art</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About Me</a></li>
+            </ul>
+          </nav>
 
         <section id="section-0">
           <h1>PBNATION</h1>
@@ -126,17 +127,58 @@
 
           <div class="researchGrid">
             <a class="centerpic" href="Pictures/PBNATION_User_Test_Time_Tests.png" data-fancybox="group" data-caption="Mark PbNation Functionality Test">
-              <h3>Time Tests</h3><img src="Pictures/PBNATION_User_Test_Time_Tests.png" alt="Mark PbNation Functionality Test">
+              <h3>TIME TESTS</h3><img src="Pictures/PBNATION_User_Test_Time_Tests.png" alt="Mark PbNation Functionality Test">
             </a>
-            <a class="leftpic" href="Pictures/markoriginal.png" data-fancybox="group" data-caption="Mark PbNation Functionality Test">
-              <h3>The original site</h3><img src="Pictures/markoriginal.png" alt="Mark PbNation Functionality Test">
-            </a>
+            <div class="leftpic">
+                <p>
+                  <h4>ORIGINAL</h4>
+                  <b>User: Mark Shull</b>
+                  <b>Original Site Function Test</b>
+                  <br />
+                  <br />
+                  <b>Task:</b><br/>
+                  <i>Find Profile</i>
+                  <br />
+                  <br />
+                  Well I already can't find how to get to anyything that'd be "my account"... am I retarded... ohh, I found it. User CP, it's like in the
+                  middle of the nav menu. That's dumb. And since when does CP mean control panel. Honestely, this is horrible.
+                  <br />
+                  <br />
+                  <i>Follow Thread</i>
+                  <br />
+                  <br />
+                  Mmmmk, I was able to subscribe to a thread and find it, but I can see how someone with less experience with the internet forums would confused.
+                  There's not like enough separation of all the elements in my opinion; everything bleeds together. A generic hyperlink has the same styling as
+                  any other link that is on the page which makes it really hard to discern things as being different. Nothing is a button, nothing is really
+                  stylized and everything is really light font-weight.
+                </p>
+            </div>
             <a class="leftpicgif" href="Pictures/keyboard_smash2.gif" data-fancybox="group" data-caption="Mark PbNation Functionality Test">
               <img src="Pictures/keyboard_smash2.gif" alt="Mark PbNation Functionality Test">
             </a>
-            <a class="rightpic" href="Pictures/markafter.png" data-fancybox="group" data-caption="PbNation Efficiency Testt">
-              <h3>The redesign</h3><img src="Pictures/markafter.png" alt="PbNation Efficiency Test">
-            </a>
+            <div class="rightpic">
+                <p>
+                  <h4>REDESIGN</h4>
+                  <b>User: Mark Shull</b>
+                  <b>Prototype Test</b>
+                  <br />
+                  <br />
+                  <b>Task:</b><br/>
+                  <i>Find Profile</i>
+                  <br />
+                  <br />
+                  It was easy. I don't really remember what the original site was, but it was pretty self-explanatory. It's more apparent with yours because it's not
+                  square in the middle of a menu... it's on the end where I would assume most people think. And it's not listed as CP which is dumb.
+                  <br />
+                  <br />
+                  <i>Follow Thread</i>
+                  <br />
+                  <br />
+                  After a user functionality test, added hearts (favorites) next to the thread titles when you are actually inside the thread is definitely easier than
+                  PbNation. Everything there is hidden behind a drop down, a menu, or a separate page. I feel like 'subscribe to this thread' is something that people
+                  are going to want to do a whole bunch. I think that it deserves its own element. It deserves some screen real estate.
+                </p>
+            </div>
             <a class="rightpicgif" href="Pictures/thumbsup.gif" data-fancybox="group" data-caption="PbNation Efficiency Testt">
               <img src="Pictures/thumbsup.gif" alt="PbNation Efficiency Test">
             </a>
@@ -156,9 +198,9 @@
         </section>
 
         <section id="section-4" class="grid">
-          <h2>Personas</h2>
+          <h2>PERSONAS</h2>
 
-          <p>
+          <p class="personas-main-paragraph">
             Based around user stories, demographics, and pain points, as well as what I found to be the main uses of the site, I then put together multiple
             persona’s to help keep perspective of the different types of user's and their goals and interests while designing the initial wireframe. This
             included aspect of buying, selling, and trading as well as a way to organize events, follow and save threads, a more cohesive way to navigate the
@@ -166,9 +208,59 @@
           </p>
 
           <div class="personaPic">
-            <a class="personaPic1" href="Pictures/Persona_2.png" data-fancybox="group" data-caption="Mark Persona">
-              <img src="Pictures/Persona_2.png" alt="Mark Persona">
-            </a>
+            <div class="personaPic1">
+              <div class="persona-container">
+                <div class="persona-title"><span class="persona-name">SHARON</span></div>
+                <div class="persona-body">
+                  <div class="left-side-info">
+                    <h4>Basic Info</h4>
+                    <div class="persona-basic-info">
+                      <li><b>Age:</b> 62</li>
+                      <li><b>Occupation:</b> Travel Counselor</li>
+                      <li><b>Location:</b> Burlington, VT</li>
+                      <li><b>Gender:</b> Female</li>
+                      <li><b>Tier:</b> Casual</li>
+                    </div>
+                    <div class="persona-img">
+                      <img src="Pictures/Sharon.jpg" alt="Sharon">
+                      <div class="persona-quote"> We are what we repeatedly do.</div>
+                    </div>
+                  </div>
+                  <div class="right-side-info">
+                    <div class="persona-info">
+                      <div class="persona-motivations">
+                        <h4>Motivations</h4>
+                        <p>
+                        Sharon has been off and on at the gym years. Like a lot of people, having a trainer is expensive and you make sure sure you are getting what you pay for.
+                        More importantly you want to know that the trainer knows what they are doing. Sharon has had a past negative experience with a trainer ultimately resulting
+                        in a knee injury. With FitForm, it offers Sharon the experience of accuracy, knowledge, feedback and more, which is something Sharon was unable to receive
+                        through a trainer. The application also allows her to save up to 90% of what she was paying for a trainer.
+                        </p>
+                      </div>
+                      <div class="goals-left">
+                        <h4>Goals</h4>
+                        <li>Easy, Simple, Centralized</li>
+                        <li>Not too complicated</li>
+                        <li>Can get suggested exercises</li>
+                      </div>
+                      <div class="frustrations-right">
+                        <h4>Frustrations</h4>
+                        <li>Would like to have a built in workout</li>
+                        <li>Ask questions with hasty responses</li>
+                      </div>
+                      <div class="persona-bio">
+                        <h4>Bio</h4>
+                        <p>
+                        Sharon is a travel counselor who handles corporate business accounts and their traveling needs. She is a great aunt to a beautiful nephew. Sharon also spends
+                        a lot of time traveling around the world herself using her American Airlines discount after retiring from their Connecticut branch. She enjoys being able to
+                        workout at home, whether in the pool or inside with her free weights.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <a class="personaPic2" href="Pictures/Persona_1.png" data-fancybox="group" data-caption="Stephen Persona">
               <img src="Pictures/Persona_1.png" alt="Stephen Persona">
             </a>
@@ -179,7 +271,7 @@
         </section>
 
         <section id="section-5" class="grid">
-            <h2>Iteration & Design</h2>
+            <h2>ITERATION & DESIGN</h2>
             <p>
               Once the initial wireframes were built, I did a second round of testing using the same objectives and people to gauge the disparity between the
               original site and new design. Considering how shockingly difficult it was for user to find their profile, I made it appoint to fix that. With the
@@ -211,7 +303,7 @@
         </section>
 
         <section id="section-6" class="grid">
-          <h2>Preference Testing</h2>
+          <h2>PREFERENCE TESTING</h2>
 
           <p>
             Once the sites functionality and efficiency were addressed, I focused on running preference tests for visual design. Some of the sites bigger visual issues
@@ -246,7 +338,7 @@
         </section>
 
         <section id="section-7" class="grid">
-          <h2>The Results</h2>
+          <h2>RESULTS</h2>
           <p>
             Successfully implementing an improved, more functional, and more efficient site, I believe would make a positive change for users. It brings together
             some of the sites older elements with some newer ones but also allows the user to engage with the content more by reducing wait time, increasing site
@@ -269,8 +361,8 @@
         </section>
 
         <section id="section-8" class="nextlast">
-          <a href="ffCaseStudy.html"><div class="last">Last Case Study</div></a>
-          <a href="ffCaseStudy.html"><div class="next">Next Case Study</div></a>
+          <a class="last" href="ffCaseStudy.html"><div>Last Case Study</div></a>
+          <a class="next" href="ffCaseStudy.html"><div>Next Case Study</div></a>
         </section>
 
       </main>

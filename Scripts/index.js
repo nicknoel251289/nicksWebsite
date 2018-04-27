@@ -22,7 +22,7 @@ $(document).ready(function(){
       }
 
       var sideNavPosition = $('#section-1').position(); //same exact code as caseStuy above lel
-      var sideNavPositionY = sideNavPosition.top;
+      var sideNavPositionY = sideNavPosition.top - 71;
       if (lastPosition > position) {
         $('nav').animate({height: '71px'},10);
         $('nav').css('top', '0px');
