@@ -3,7 +3,7 @@ body {
   padding: 0;
   background: white;
   font-size: 1.1em;
-  line-height: 1.8;
+  line-height: 1.6;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
 }
@@ -101,7 +101,7 @@ ul li:hover {
 
 #section-1 {
   background: white;
-  padding: 5em 2em 2em 2em;
+  padding: 7em 2em;
   text-align: center;
 }
 
@@ -115,10 +115,10 @@ ul li:hover {
 .cs1info, .cs2info {
   border-bottom: 1px solid #555;
 }
-.cs1info h3 {
+.cs1info h2 {
   color: #fd3600;
 }
-.cs2info h3 {
+.cs2info h2 {
   color: #1baa9b;
 }
 .cs1info p, .cs2info p {
@@ -140,7 +140,7 @@ ul li:hover {
 @media(min-width: 600px) {
 
   #section-1 {
-    grid-template-rows: .5fr 1fr .5fr .5fr;
+    grid-template-rows: 100px 1fr .5fr;
     grid-gap: 1em;
   }
   #section-1 h1 {
@@ -208,11 +208,11 @@ ul li:hover {
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr; /* Can use %, em's, px's, fr's */
+    grid-template-columns: .2fr 4fr 4fr .5fr;
   }
 
   #section-1 {
-    padding: 5em 0;
+    padding: 9.2em 0 7em 0;
   }
 
   #section-1 h1 {
@@ -234,10 +234,15 @@ ul li:hover {
 
 @media(min-width: 1050px) {
 
+  .grid {
+    display: grid;
+    grid-template-columns: .5fr 4fr 4fr .5fr;
+  }
+
   #section-1 {
-    padding: 5em 0;
-    grid-gap: 2.5em;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
+    padding: 10em 0;
+    grid-gap: .5em;
+    grid-template-rows: 1fr 4fr 4fr;
   }
 
   .cs1 {
@@ -256,6 +261,10 @@ ul li:hover {
     border-bottom: 0px solid white;
     text-align: left;
   }
+  .cs1info h2 {
+    border-top: 3px solid #fe3600;
+    padding-top: 1em;
+  }
   .cs2info {
     grid-column: 2/3;
     padding-top: 2.5em;
@@ -263,7 +272,22 @@ ul li:hover {
     border-bottom: 0px solid white;
     text-align: right;
   }
+  .cs2info h2 {
+    border-top: 3px solid #1baa9b;
+    padding-top: 1em;
+  }
   .cs2info p {
     text-align: right;
   }
+}
+
+@media(min-width: 1400px) {
+
+    .grid {
+      grid-template-columns: 1.2fr 2.3fr 2.3fr 1.2fr;
+    }
+    #section-1 {
+      padding-top: 11em;
+    }
+
 }

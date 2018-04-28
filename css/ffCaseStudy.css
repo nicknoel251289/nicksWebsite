@@ -483,6 +483,7 @@ nav {
   .persona-img {
     padding: 0 2em 1em 0;
   }
+
   .preference-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
