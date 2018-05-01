@@ -29,6 +29,7 @@ h2, h3, h4, h5, h6 {
   color: #00316b;
   margin: 0;
   letter-spacing: 3px;
+  z-index: 900;
 }
 p {
   margin: 0;
@@ -46,7 +47,7 @@ nav {
   width: 100%;
   background: #00316b;
   position: fixed;
-  z-index: 1000;
+  z-index: 1200;
   transition: .4s;
 }
 ul {
@@ -107,6 +108,7 @@ ul li:hover {
 
 .cs1, .cs2 {
   padding-top: 2.5em;
+  z-index: 100;
 }
 .cs1 img:hover, .cs2 img:hover {
   transform: scale(1.08);
@@ -114,12 +116,15 @@ ul li:hover {
 }
 .cs1info, .cs2info {
   border-bottom: 1px solid #555;
+  z-index: 1000;
 }
 .cs1info h2 {
   color: #fd3600;
+  padding-top: 1em;
 }
 .cs2info h2 {
   color: #1baa9b;
+  padding-top: 1em;
 }
 .cs1info p, .cs2info p {
   text-align: left;
@@ -229,6 +234,9 @@ ul li:hover {
   #section-1 li {
     width: 40%;
   }
+  .cs1info h2, .cs2info h2 {
+    padding-top: 0;
+  }
 
 }
 
@@ -241,7 +249,7 @@ ul li:hover {
 
   #section-1 {
     padding: 10em 0;
-    grid-gap: .5em;
+    grid-gap: 0;
     grid-template-rows: 1fr 4fr 4fr;
   }
 
@@ -256,7 +264,7 @@ ul li:hover {
   .cs1info {
     grid-column: 3/4;
     grid-row: 2/3;
-    padding-top: 2.5em;
+    padding-top: 3.5em;
     padding-right: 5em;
     border-bottom: 0px solid white;
     text-align: left;
@@ -267,7 +275,7 @@ ul li:hover {
   }
   .cs2info {
     grid-column: 2/3;
-    padding-top: 2.5em;
+    padding-top: 3.5em;
     padding-left: 5em;
     border-bottom: 0px solid white;
     text-align: right;

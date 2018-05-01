@@ -19,7 +19,7 @@ body {
 }
 h1 {
   font-family: 'Anton', sans-serif;
-  color: #00316b;
+  color: #2a9fdc;
   margin: 0;
   font-size: 2em;
   letter-spacing: 3px;
@@ -28,7 +28,7 @@ h1 {
 }
 h2, h3, h4, h5, h6 {
   font-family: 'Anton', sans-serif;
-  color: #00316b;
+  color: #2a9fdc;
   margin: 0;
   letter-spacing: 3px;
 }
@@ -234,10 +234,10 @@ ul li:hover {
 /* Art work */
 #section-2 {
   padding: 4em 2em;
-  background: #2a9fdc; /* #97d7b5; */
+  background: #ddd; /* #97d7b5; */
 }
 #section-2 h1 {
-  color: white;
+  color: #2a9fdc;
 }
 #section-2 p {
   padding: 4em 0;
@@ -262,7 +262,7 @@ ul li:hover {
   transition: .2s;
 }
 .pic1, .pic2, .pic3, .pic4, .pic5, .pic6 {
-  border: 10px solid white;
+  border: 14px solid white;
   background: white;
 }
 /* Who am I?! */
@@ -296,7 +296,7 @@ ul li:hover {
   color: #222222;
 }
 #section-4 .box:last-child {
-  background: #222222;
+  background: #2a9fdc;
   color: white;
 }
 .myFamily {

@@ -19,8 +19,8 @@ h1, h2, h4 {
   font-weight: initial;
   letter-spacing: 1.5px;
   letter-spacing: 1px;
-  font-size: 2.5em;
-  color: black;
+  font-size: 3.5em;
+  color: #555;
   text-align: center;
 }
 h3 {
@@ -128,9 +128,6 @@ nav {
 #section-3 h3 {
   padding: 2em 0;
 }
-#section-3 p {
-  padding-top: 3em;
-}
 
 /*Padding and seperating sections evenly */
 #section-0 {
@@ -172,7 +169,7 @@ nav {
 #section-1 h2{
   text-align: left;
   position: absolute;
-  padding-top: 1em;
+  padding-top: .5em;
   color: #111;
   grid-column: 1/3;
   justify-self: center;
@@ -199,12 +196,15 @@ nav {
   grid-column: 1/5;
   grid-gap: 2em;
 }
+.researchGrid img {
+  padding: 1.5em 0;
+}
 .centerpic {
   grid-column: 1/5;
   text-decoration: none;
 }
-.centerpic h3 {
-  padding: 0;
+.centerpic h4 {
+  padding: 1em 0 1em 0;
 }
 .leftpic {
   grid-column: 1/5;
@@ -212,6 +212,9 @@ nav {
 }
 .leftpicgif {
   grid-column: 1/5;
+}
+.leftpic h4 {
+  padding: 1em 0 1em 0;
 }
 .leftpic h3 {
   padding: 0;
@@ -222,6 +225,9 @@ nav {
 }
 .rightpicgif {
   grid-column: 1/5;
+}
+.rightpic h4 {
+  padding: 1em 0 1em 0;
 }
 .rightpic h3 {
   padding: 0;
@@ -276,7 +282,7 @@ nav {
 .persona-body h4{
   color: #444;
   font-size: 1.7em;
-  padding: 0;
+  padding: 1em 0 0 0;
 }
 .left-side-info {
   grid-column: 1/3;
@@ -293,7 +299,6 @@ nav {
 .persona-img {
   grid-column: 1/3;
   grid-row: 1/3;
-  padding: 1em 2em 3em 2em;
   text-align: center;
 }
 .persona-img img {
@@ -429,11 +434,8 @@ nav {
   #section-1 {
     padding: 0;
   }
-  #section-1 h2 {
-    padding-top: 1em;
-  }
   #section-1 p {
-    padding: 7em 2em 1em 2em;
+    padding: 8em 2em 1em 2em;
     grid-column: 1/3;
   }
 
@@ -450,7 +452,7 @@ nav {
   .personaPic {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr .5fr;
+    grid-template-rows: 1fr .05fr;
     grid-column: 1/5;
     grid-gap: 1em;
   }
@@ -539,7 +541,7 @@ nav {
   .persona-body h4{
     color: #444;
     font-size: 1.7em;
-    padding: .5em 0;
+    padding: 1em 0 0 0;
   }
   .left-side-info {
     grid-column: 1/3;
@@ -553,13 +555,12 @@ nav {
     top: -25px;
   }
   .persona-img {
-    padding: 0 0 3em 0;
     grid-column: 1/2;
   }
   .persona-basic-info {
     grid-column: 2/3;
     position: relative;
-    top: -10px;
+    top: 5px;
   }
   .right-side-info {
     grid-column: 1/3;
@@ -620,28 +621,12 @@ nav {
     display: none;
   }
 
-  #section-0 {
-    display: grid;
-    grid-template-columns: .5fr 8fr 7fr .5fr;
-    grid-template-rows: .2fr .5fr .5fr;
-    grid-column-gap: 1em;
-    text-align: left;
-  }
   #section-0 a {
-    grid-column: 1/3;
-    grid-row: 1/3;
     padding-top: 7em;
   }
   #section-0 h1 {
-    grid-column: 3/4;
-    grid-row: 2/3;
     padding-top: 1.5em;
     justify-self: left;
-  }
-  #section-0 p {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    padding-top: 9.5em;
   }
 
   .section-2a {
@@ -712,9 +697,6 @@ nav {
   #section-1 p, #section-2 p, #section-3 p, #section-4 p, #section-5 p, #section-6 p, #section-7 p {
     grid-column: 2/4;
   }
-  #section-0 {
-    height: 600px;
-  }
   #section-1 {
     grid-template-columns: 1fr 375px 375px 1fr;
     padding: 0;
@@ -723,6 +705,7 @@ nav {
     align-content: center;
   }
   #section-1 h2 {
+    padding-top: 1em;
     padding-bottom: 4em;
     grid-column: 2/4;
   }
@@ -759,6 +742,7 @@ nav {
 }
 
 @media(min-width: 950px){
+
   .persona-container {
     display: grid;
     grid-row-gap: 1em;
@@ -776,11 +760,12 @@ nav {
   .persona-body {
     grid-template-columns: 1fr 2.5fr;
     grid-column-gap: 1em;
+    padding: 0 2em 2em 2em;
   }
   .persona-body h4{
     color: #444;
     font-size: 1.7em;
-    padding: 0;
+    padding: 1em 0 0 0;
   }
   .left-side-info {
     grid-column: 1/2;
@@ -797,14 +782,24 @@ nav {
   .persona-img {
     grid-column: 1/3;
     grid-row: 3/4;
+    position: relative;
+    top: 2em;
   }
   .persona-basic-info {
     grid-column: 1/3;
     position: relative;
-    top: 0;
+    top: 2em;
   }
   .right-side-info {
     grid-column: 2/3;
+  }
+}
+
+@media(min-width: 990px){
+
+  #section-0 a img{
+    max-width: 902px;
+    margin: 0 auto;
   }
 }
 
@@ -820,16 +815,7 @@ nav {
     grid-column: 2/6;
   }
   #section-0{
-    grid-template-columns: 1fr 523px 417px 1fr;
-  }
-  #section-0 h1 {
-    padding-top: 2em;
-  }
-  #section-0 p {
-      padding: 10em 0 0 0;
-  }
-  #section-0 a {
-    grid-column: 2/3;
+    grid-template-columns: .5fr 780px 240px 1fr;
   }
 
   .aboutbg {
@@ -843,6 +829,12 @@ nav {
   #section-0 {
     padding-bottom: 10em;
   }
+  #section-0 a {
+    max-width: 1000px;
+  }
+  #section-0 p {
+    padding-top: 3em;
+  }
 }
 
 @media(min-width: 1474px){
@@ -854,6 +846,9 @@ nav {
     align-self: center;
     justify-content: center;
     justify-self: center;
+  }
+  #section-0 {
+    padding-bottom: 10em;
   }
 
 }

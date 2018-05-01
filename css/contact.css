@@ -13,7 +13,7 @@ body {
 }
 h1 {
   font-family: 'Anton', sans-serif;
-  color: #00316b;
+  color: #006ba3;
   margin: 0;
   font-size: 2em;
   letter-spacing: 3px;
@@ -21,7 +21,7 @@ h1 {
 }
 h2, h3, h4, h5, h6 {
   font-family: 'Anton', sans-serif;
-  color: #00316b;
+  color: #006ba3;
   margin: 0;
   letter-spacing: 3px;
 }
@@ -113,8 +113,7 @@ iframe {
 #section-1 h1 {
   font-family: 'Anton', sans-serif;
   font-size: 3em;
-  color: #333;
-  letter-spacing: .2em;
+  color: #2a9fdc;
   grid-row: 1/2;
   padding-bottom: 1em;
 }
@@ -128,11 +127,10 @@ iframe {
 input, textarea {
   padding: 12px;
   margin-bottom: 25px;
-  border: 1px solid gray;
   font-family: 'Lato', sans-serif;
   font-size: .9em;
   line-height: 1.5;
-  border-radius: 10px;
+  border: 1px solid #cecece;
 }
 .emailinput {
   grid-column: 2/3;
@@ -157,15 +155,11 @@ input, textarea {
 .submitinput {
   grid-column: 2/3;
   grid-row: 6/7;
-  background: #3f89ff;
+  background: #00316b;
   color: white;
-  box-shadow: -2px 3.5px 60px 4px #a5a5a5;
-  transition: .1s;
 }
 .submitinput:hover {
-  box-shadow: -2px 3.5px 20px 1px #a5a5a5;
-  transition: .1s;
-  transform: scale(.95);
+  background: #006ba3;
 }
 .emailinput:hover, .phonenumberinput:hover, .firstnameinput:hover,
  .lastnameinput:hover, .messageinput:hover {
@@ -233,10 +227,10 @@ input, textarea {
   grid-template-columns: 130px 130px 50px;
 }
 i {
-  color: #3f89ff;
+  color: #00316b;
 }
 .medias i:hover {
-  color: #013987;
+  color: #006ba3;
 }
 .github {
   font-size: 2em;
