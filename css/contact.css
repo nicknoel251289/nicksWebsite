@@ -1,18 +1,23 @@
+@font-face {
+  font-family: "Jack";
+  src: url("Fonts/Jack.ttf");
+}
+
 body {
   margin:0;
   padding: 0;
   background: white;
   font-size: 1.1em;
-  line-height: 1.8;
+  line-height: 1.6;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
   text-align: center;
   overflow-x: hidden;
   max-height: 100%;
+  font-weight: 300;
 }
 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Jack';
   color: #006ba3;
   margin: 0;
   font-size: 2em;
@@ -20,7 +25,7 @@ h1 {
   font-weight: 400;
 }
 h2, h3, h4, h5, h6 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Jack';
   color: #006ba3;
   margin: 0;
   letter-spacing: 3px;
@@ -59,7 +64,7 @@ ul li {
   display: block;
   text-align: center;
   height: 71px;
-  line-height: 71px;
+  line-height: 73px;
   background: #00316b;
   }
 ul li a {
@@ -67,7 +72,7 @@ ul li a {
   color: #fff;
   font-size: .9em;
   padding: 30px 20px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0;
 }
@@ -111,7 +116,7 @@ iframe {
   padding-top: 7em;
 }
 #section-1 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Jack';
   font-size: 3em;
   color: #2a9fdc;
   grid-row: 1/2;
@@ -303,7 +308,7 @@ i {
   ul {
     display: inline-block;
     float: right;
-    padding-right: 150px;
+    padding-right: 70px;
   }
   ul li {
     display: inline-block;

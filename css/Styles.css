@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Painter";
+  src: url("Fonts/Painter_PERSONAL_USE_ONLY.ttf");
+}
+@font-face {
+  font-family: "Ocean";
+  src: url("Fonts/Ocean.ttf");
+}
+@font-face {
+  font-family: "Jack";
+  src: url("Fonts/Jack.ttf");
+}
+@font-face {
+  font-family: "hotpizza";
+  src: url("Fonts/hotpizza.ttf");
+}
+@font-face {
+  font-family: "BB";
+  src: url("Fonts/BeckerBlackNF.ttf");
+}
+@font-face {
+  font-family: "Blitz";
+  src: url("Fonts/MinstrelPosterNF.ttf");
+}
+@font-face {
+  font-family: "Orb";
+  src: url("Fonts/Orbitron-500.ttf");
+}
+
+
 body {
   margin:0;
   padding: 0;
@@ -6,31 +36,35 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-/*font-family: 'Amaranth', sans-serif;
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Titillium Web', sans-serif;
-  font-family: 'Passion One', cursive;
-  font-family: 'Changa One', cursive;
-  font-family: 'Nunito', sans-serif;
-  font-family: 'Pontano Sans', sans-serif;
-  font-family: 'Bevan', cursive;
-  font-family: 'Anton', sans-serif;*/
+  font-weight: 300;
+  /*
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Titan One', cursive;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Righteous', cursive;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Hind', sans-serif;
+    */
 }
 h1 {
-  font-family: 'Anton', sans-serif;
-  color: #2a9fdc;
+  font-family: 'Roboto', sans-serif;
+  /*color: #2a9fdc;*/
+  color: #555;
   margin: 0;
-  font-size: 2em;
-  letter-spacing: 3px;
-  font-weight: 400;
+  font-size: 2.5em;
   text-align: center;
+  font-weight: 800;
 }
 h2, h3, h4, h5, h6 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: #2a9fdc;
   margin: 0;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 img {
   display: block; /* This displays it across the width of the whole screen*/
@@ -60,7 +94,6 @@ a:visited {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: 600;
 }
 .see-more-button a:hover{
   background: #006ba3;
@@ -92,12 +125,13 @@ ul li a {
   color: #fff;
   font-size: .9em;
   padding: 30px 20px;
-  font-weight: 700;
+  font-weight: lighter;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0;
 }
 ul li:hover {
   background: #006ba3;
+  border-left: 1px solid #ddd;
   /*background: #e91e63;*/
 }
 .toggle {
@@ -164,12 +198,21 @@ ul li:hover {
 }
 .intro-header h1 {
   padding: 0;
-  font-weight: 400;
-  font-family: 'Anton', sans-serif;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
   font-size: 3.5em;
   line-height: 1.2em;
-  margin-bottom: 15px;
   color: white;
+  letter-spacing: -4px;
+  text-decoration: none;
+}
+
+.intro-header span {
+  font-family: 'Jack';
+  font-size: .9em;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-decoration: underline;
 }
 
 /*LANDING PAGE SEE MY WORK BUTTON - EASY SCROLL*/
@@ -186,7 +229,6 @@ ul li:hover {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: 600;
 }
 .btn-outline a:hover{
   background: #006ba3;
@@ -198,15 +240,17 @@ ul li:hover {
   padding: 0 2em 4em 2em;
 }
 #section-1 h1 {
-  padding-top: 2em;
+  padding: 2.5em 0;
 }
 .cs1, .cs2 {
-  padding-top: 3em;
   z-index: 100;
 }
 .cs1 img, .cs2 img {
   transition: .2s;
   z-index: 100;
+}
+.cs2 img {
+  padding-top: 2em;
 }
 .cs1 img:hover, .cs2 img:hover {
   transform: scale(1.1);
@@ -220,27 +264,29 @@ ul li:hover {
 .cs1info h2 {
   color: #fd3600;
   z-index: 300;
-  padding: 1em 0;
+  padding: .5em 0;
+  font-family: 'Orb';
 }
 .cs2info h2 {
   color: #1baa9b;
   z-index: 300;
-  padding: 1em 0;
+  padding: .5em 0;
 }
 .cs1p, .cs2p {
-  padding-bottom: 2em;
+  padding-bottom: 1.5em;
 }
 
 /* Art work */
 #section-2 {
-  padding: 4em 2em;
-  background: #ddd; /* #97d7b5; */
+  padding: 0 2em 4em 2em;
+  background: #e2e2e2; /* #97d7b5; */
 }
 #section-2 h1 {
   color: #2a9fdc;
+  padding: 2.5em 0;
 }
 #section-2 p {
-  padding: 4em 0;
+  padding-bottom: 3.4em;
   text-align: left;
 }
 .art-grid {
@@ -267,12 +313,14 @@ ul li:hover {
 }
 /* Who am I?! */
 #section-3 {
-  padding: 4em 2em;
+  padding: 0 2em 4em 2em;
   background: white;
+}
+#section-3 h1 {
+  padding: 2.5em 0;
 }
 #section-3 p{
   text-align: left;
-  padding-top: 4em;
 }
 
 /* Section 4 / BOXES CONTACT AND FAMILY*/
@@ -292,7 +340,7 @@ ul li:hover {
   padding: 4em 0;
 }
 #section-4 .box:first-child {
-  background: #dbdbdb;
+  background: #e2e2e2;
   color: #222222;
 }
 #section-4 .box:last-child {
@@ -336,8 +384,11 @@ ul li:hover {
 @media(min-width: 600px) {
 
   #header {
-    height: 1080px;
+    height: 100vh;
     background: none;
+  }
+  .intro {
+    grid-template-columns: 1fr 12fr 1fr;
   }
   .desktopimg {
     height: 120%;
@@ -355,20 +406,18 @@ ul li:hover {
     padding: 3em 0;
   }
 
-  #section-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5em;
-  }
   #section-1 h1 {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  .cs1p {
-    text-align: left;
+  .case-studies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
   }
-  .cs2p {
+  .cs1p, .cs2p {
     text-align: left;
+    padding-bottom: 0;
   }
   #section-1 .see-more-button {
     grid-column: 1/3;
@@ -380,6 +429,9 @@ ul li:hover {
   .cs2 {
     grid-column: 2/3;
     grid-row: 2/3;
+  }
+  .cs2 img {
+    padding-top: 0;
   }
   .cs1info {
     grid-column: 1/2;
@@ -411,7 +463,7 @@ ul li:hover {
     padding: .5em;
   }
   #section-4 p {
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     padding-top: 0;
   }
 
@@ -436,7 +488,7 @@ ul li:hover {
   ul {
     display: inline-block;
     float: right;
-    padding-right: 150px;
+    padding-right: 70px;
   }
   ul li {
     display: inline-block;
@@ -447,7 +499,7 @@ ul li:hover {
   }
 
   .intro {
-    grid-template-columns: 1fr 1fr 10fr 150px;
+    grid-template-columns: 1fr 1fr 10fr 70px;
   }
   .intro-header {
     grid-column: 3/4;
@@ -470,16 +522,15 @@ ul li:hover {
 
 @media(min-width: 750px) {
 
-  #section-1 {
-    display: grid;
-    grid-template-columns: .5fr 2fr 2fr .5fr;
-  }
   #section-1 h1 {
     grid-column: 2/4;
   }
   #section-1 p {
     grid-column: 2/4;
     margin: auto;
+  }
+  .case-studies-container {
+    grid-template-columns: .1fr 2fr 2fr .1fr;
   }
   .cs1 {
     grid-column: 2/3;
@@ -495,7 +546,6 @@ ul li:hover {
   }
   #section-1 .see-more-button {
       grid-column: 2/4;
-      padding-top: 1em;
   }
 
   #section-2 {
@@ -512,65 +562,7 @@ ul li:hover {
   .art-grid {
     grid-column: 2/4;
   }
-  .art-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .49fr .49fr .49fr .49fr;
-  }
-  .pic1 {
-    grid-column: 1/3;
-    overflow: hidden;
-  }
-  .pic11 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    width: 100%;
-  }
-  .pic2 {
-    grid-column: 3/5;
-    grid-row: 1/3;
-    overflow: hidden;
-  }
-  .pic22 {
-    width: 130%;
-  }
-  .pic3 {
-    grid-column: 1/3;
-    grid-row: 2/4;
-    overflow: hidden;
-  }
-  .pic33 {
-    width: 130%;
-  }
-  .pic4 {
-    grid-column: 3/5;
-    grid-row: 3/5;
-    overflow: hidden;
-  }
-  .pic44{
-    width: 172.5%;
-    position: relative;
-    left: -150px;
-  }
-  .pic5 {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    overflow: hidden;
-  }
-  .pic55 {
-    width: 172.5%;
-    position: relative;
-    left: -70px;
-  }
-  .pic6 {
-    grid-column: 2/3;
-    grid-row: 4/5;
-    overflow: hidden;
-  }
-  .pic66 {
-    width: 172.5%;
-    position: relative;
-    left: -70px;
-  }
+
   #section-2 .see-more-button {
       grid-column: 2/4;
   }
@@ -601,19 +593,20 @@ ul li:hover {
 
 @media(min-width: 1050px) {
 
-  #section-1, #section-2, #section-3 {
-    grid-template-columns: 1fr 500px 500px 1fr;
-  }
-
-  #section-1 {
-    grid-column-gap: 2em;
-    grid-row-gap: 3.5em;
+  #section-2, #section-3 {
+    grid-template-columns: 1fr 480px 480px 1fr;
   }
 
   #section-1 h1 {
     grid-column: 2/4;
+    padding: 2.5em 0 0 0;
   }
 
+  .case-studies-container {
+    grid-column-gap: 0em;
+    grid-row-gap: 6em;
+    grid-template-columns: 1fr 480px 480px 1fr;
+  }
   .cs1 {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -632,7 +625,6 @@ ul li:hover {
   }
   .cs1info h2 {
     grid-column: 3/4;
-    border-top: 3px solid #fd3600;
     text-align: left;
   }
   .cs2info {
@@ -642,7 +634,6 @@ ul li:hover {
   }
   .cs2info h2{
     grid-column: 2/3;
-    border-top: 3px solid #1baa9b;
     text-align: right;
   }
   .cs1info p{
@@ -659,6 +650,11 @@ ul li:hover {
   }
 }
 
+@media(min-width: 1600px) {
+  #section-1 {
+    grid-template-columns:  1.2fr 2fr 2fr 1.2fr;
+  }
+}
 
 @media(min-width: 1600px) {
 
